@@ -5,15 +5,17 @@ using System.Linq;
 
 class DataExtractor 
 {
-        public TextBox formaInput, materialInput, culoareInput, grosimeInput;
+        public RadioButton formaInput;
+        public ComboBox materialInput,grosimeInput;
+        public RadioButton culoareInput;
         string pretkgInput, GreutateInput;
-        int pretkgInputint, GreutateInputInt;
-    string filePath = "D:\\AmtechCalculator\\DatabaseInfo.csv";
+        float pretkgInputint, GreutateInputInt;
+        string filePath = "D:\\AmtechCalculator\\DatabaseInfo.csv";
 
     public DataExtractor() { }
 
 
-        public double FindMatchingRow(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, ComboBox grosimeInput)
+        public float FindMatchingRow(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, ComboBox grosimeInput)
         {
             string[] lines = File.ReadAllLines(filePath);
 
@@ -22,7 +24,7 @@ class DataExtractor
             int formaIndex = Array.IndexOf(headers, "Forma");
             int materialIndex = Array.IndexOf(headers, "Material");
             int culoareIndex = Array.IndexOf(headers, "Culoare");
-            int greutateIndex = Array.IndexOf(headers, "Grosime");
+            int grosimeIndex = Array.IndexOf(headers, "Grosime");
             int pretkgIndex = Array.IndexOf(headers, "Pretkg");
             Boolean founded = false;
 
@@ -38,10 +40,10 @@ class DataExtractor
                 if (fields[formaIndex] == formainput1 &&
                     fields[materialIndex] == materialinput1 &&
                     fields[culoareIndex] == culoareinput1 &&
-                    fields[greutateIndex] == grosimeInput1)
+                    fields[grosimeIndex] == grosimeInput1)
                 {
                     pretkgInput = fields[pretkgIndex];
-                    int.TryParse(pretkgInput, out pretkgInputint);
+                    float.TryParse(pretkgInput, out pretkgInputint);
                     founded = true;
                     break;
                 }
@@ -54,7 +56,7 @@ class DataExtractor
             return pretkgInputint;
         }
 
-    public double FindMatchingRowGreutate(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, ComboBox grosimeInput)
+    public float FindMatchingRowGreutate(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, ComboBox grosimeInput)
     {
         string[] lines = File.ReadAllLines(filePath);
 
@@ -82,7 +84,7 @@ class DataExtractor
                 fields[grosimeIndex] == grosimeInput1)
             {
                 GreutateInput = fields[GreutateIndex];
-                int.TryParse(GreutateInput, out GreutateInputInt);
+                float.TryParse(GreutateInput, out GreutateInputInt);
                 founded = true;
                 break;
             }

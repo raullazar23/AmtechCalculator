@@ -22,15 +22,19 @@ namespace AmtechCalculator.ErrorHandlers
             }
         }
 
+        public void eroareValoareLungime(TextBox lungimeTextBox)
+        {
+            float lungime;
+            if (!float.TryParse(lungimeTextBox.Text, out lungime))
+            {
+                MessageBox.Show("Introduceti corect valorile!", "Atentie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
         public void eroareValori(TextBox latimeTextBox, TextBox lungimeTextBox)
         {
-            int lungime, latime;
-            if (int.TryParse(latimeTextBox.Text, out latime) && int.TryParse(lungimeTextBox.Text, out lungime))
-            {
-                // Do something with the integer value
-            }
-            else
+            float lungime, latime;
+            if (!float.TryParse(latimeTextBox.Text, out latime) && !float.TryParse(lungimeTextBox.Text, out lungime))
             {
                 MessageBox.Show("Introduceti corect valorile!", "Atentie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

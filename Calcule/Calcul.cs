@@ -9,10 +9,10 @@ namespace AmtechCalculator.Calcule
 {
     class Calcul : DataExtractor
     {
-        protected double lungime, kgtotal, pretkg, pretfinal,latime;
+        protected float lungime, kgtotal, pretkg, pretfinal,latime;
         
         public Calcul() { }
-        public Calcul(double lungime, double kgtotal, double pretkg, double pretfinal, double latime)
+        public Calcul(float lungime, float kgtotal, float pretkg, float pretfinal, float latime)
         {
             this.lungime = lungime;
             this.pretkg = pretkg;
@@ -23,15 +23,15 @@ namespace AmtechCalculator.Calcule
 
         
 
-        public void calculPlaca()
+        public float calculPlaca(float lungime, float latime, float kgtotal, float pretkg)
         {
-            
-            pretfinal = kgtotal * lungime * Math.Pow(10,-3) + latime * Math.Pow(10,-3) * pretkg;
+            pretfinal = (float)(kgtotal * lungime * Math.Pow(10,-3) + latime * Math.Pow(10,-3) * pretkg);
+            return pretfinal;
         }
 
-        public double calculBara(double lungime, double kgtotal, double pretkg)
+        public float calculBara(float lungime, float kgtotal, float pretkg)
         {
-            pretfinal = lungime * kgtotal * pretkg;
+            pretfinal =(float) lungime* (float)Math.Pow(10,-3) * kgtotal * pretkg;
             return pretfinal;
         }
     }

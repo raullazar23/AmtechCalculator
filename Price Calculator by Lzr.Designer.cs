@@ -50,9 +50,9 @@
             negruBaraButton = new RadioButton();
             albBaraButton = new RadioButton();
             groupBox5 = new GroupBox();
-            textBox6 = new TextBox();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
+            pretpersonalizat = new TextBox();
+            prestabilitBara = new RadioButton();
+            personalizatBara = new RadioButton();
             placaPanel = new Panel();
             grosimeComboBox = new ComboBox();
             label9 = new Label();
@@ -266,6 +266,7 @@
             nrbucPa6Box.Name = "nrbucPa6Box";
             nrbucPa6Box.Size = new Size(110, 23);
             nrbucPa6Box.TabIndex = 18;
+            nrbucPa6Box.Text = "1";
             // 
             // groupBox4
             // 
@@ -303,9 +304,9 @@
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(textBox6);
-            groupBox5.Controls.Add(radioButton3);
-            groupBox5.Controls.Add(radioButton4);
+            groupBox5.Controls.Add(pretpersonalizat);
+            groupBox5.Controls.Add(prestabilitBara);
+            groupBox5.Controls.Add(personalizatBara);
             groupBox5.Location = new Point(184, 66);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(200, 76);
@@ -313,37 +314,38 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "Preț/kg";
             // 
-            // textBox6
+            // pretpersonalizat
             // 
-            textBox6.ForeColor = SystemColors.GrayText;
-            textBox6.Location = new Point(6, 49);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(122, 23);
-            textBox6.TabIndex = 17;
-            textBox6.Text = "Pret personalizat";
-            textBox6.Visible = false;
+            pretpersonalizat.ForeColor = SystemColors.GrayText;
+            pretpersonalizat.Location = new Point(6, 49);
+            pretpersonalizat.Name = "pretpersonalizat";
+            pretpersonalizat.Size = new Size(122, 23);
+            pretpersonalizat.TabIndex = 17;
+            pretpersonalizat.Text = "Pret personalizat";
+            pretpersonalizat.Visible = false;
             // 
-            // radioButton3
+            // prestabilitBara
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Checked = true;
-            radioButton3.Location = new Point(6, 22);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(77, 19);
-            radioButton3.TabIndex = 13;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Prestabilit";
-            radioButton3.UseVisualStyleBackColor = true;
+            prestabilitBara.AutoSize = true;
+            prestabilitBara.Checked = true;
+            prestabilitBara.Location = new Point(6, 22);
+            prestabilitBara.Name = "prestabilitBara";
+            prestabilitBara.Size = new Size(77, 19);
+            prestabilitBara.TabIndex = 13;
+            prestabilitBara.TabStop = true;
+            prestabilitBara.Text = "Prestabilit";
+            prestabilitBara.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // personalizatBara
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Location = new Point(89, 22);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(88, 19);
-            radioButton4.TabIndex = 14;
-            radioButton4.Text = "Personalizat";
-            radioButton4.UseVisualStyleBackColor = true;
+            personalizatBara.AutoSize = true;
+            personalizatBara.Location = new Point(89, 22);
+            personalizatBara.Name = "personalizatBara";
+            personalizatBara.Size = new Size(88, 19);
+            personalizatBara.TabIndex = 14;
+            personalizatBara.Text = "Personalizat";
+            personalizatBara.UseVisualStyleBackColor = true;
+            personalizatBara.CheckedChanged += personalizatBara_CheckedChanged;
             // 
             // placaPanel
             // 
@@ -689,9 +691,9 @@
         private RadioButton negruBaraButton;
         private RadioButton albBaraButton;
         private GroupBox groupBox5;
-        private TextBox textBox6;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
+        private TextBox pretpersonalizat;
+        private RadioButton prestabilitBara;
+        private RadioButton personalizatBara;
         private Label label15;
         private ComboBox materialBox;
         private Button ButonBara;

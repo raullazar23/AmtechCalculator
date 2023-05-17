@@ -15,6 +15,8 @@ namespace AmtechCalculator
             this.Close();
         }
 
+
+        //PANEL PLACA -----------------------------------------------------------------------------------------------------------------------
         private void personalizatButton_CheckedChanged(object sender, EventArgs e)
         {
             if (personalizatButton.Checked)
@@ -66,16 +68,6 @@ namespace AmtechCalculator
             }
         }
 
-        private void baraButton_CheckedChanged(object sender, EventArgs e)
-        {
-            if (baraButton.Checked)
-            {
-                baraPanel.Visible = true;
-                placaPanel.Visible = false;
-                baraPanel.BringToFront();
-            }
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             baraPanel.Visible = false;
@@ -90,20 +82,131 @@ namespace AmtechCalculator
             }
         }
 
+        //PANEL BARA--------------------------------------------------------------------------------------------------------------------------------------
+
+        private void baraButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (baraButton.Checked)
+            {
+                baraPanel.Visible = true;
+                placaPanel.Visible = false;
+                baraPanel.BringToFront();
+            }
+        }
+
         private void ButonBara_Click(object sender, EventArgs e)
         {
+            ErrorHandler errorHandler = new ErrorHandler();
+            errorHandler.eroareCuloare(albBaraButton, negruBaraButton);
+            errorHandler.eroareValoareLungime(lungimePa6Box);
+            errorHandler.eroareGrosime(diamPa6ComboBox);
+
+
             Calcul calcul = new Calcul();
             DataExtractor dataExtractor = new DataExtractor();
+
+
+            //Cazul in care bara este neagra
             if (negruBaraButton.Checked)
             {
-                double lungime;
-                double pretkg = dataExtractor.FindMatchingRow(baraButton, materialBox, negruBaraButton, grosimeComboBox);
-                double greutate = dataExtractor.FindMatchingRow(baraButton, materialBox, negruBaraButton, grosimeComboBox);
-                double.TryParse(lungimePa6Box.Text, out lungime);
-                double baraRON1 = calcul.calculBara(lungime, greutate, pretkg);
-                double baraEUR1 = baraRON1 * 5;
-                baraRON.Text = baraRON1.ToString();
-                baraEUR.Text = baraEUR1.ToString();
+                //Cazul in care se foloseste pretul din tabel
+                if (prestabilitBara.Checked)
+                {
+                    float lungime, numarbucati;
+
+                    float pretkg = dataExtractor.FindMatchingRow(baraButton, materialBox, negruBaraButton, diamPa6ComboBox);
+                    float greutate = dataExtractor.FindMatchingRowGreutate(baraButton, materialBox, negruBaraButton, diamPa6ComboBox);
+
+                    float.TryParse(lungimePa6Box.Text, out lungime);
+                    float.TryParse(nrbucPa6Box.Text, out numarbucati);
+
+                    float baraRON1 = calcul.calculBara(lungime, greutate, pretkg) * numarbucati;
+                    float baraEUR1 = (float)(baraRON1 / 5);
+
+                    baraRON.Text = baraRON1.ToString();
+                    baraEUR.Text = baraEUR1.ToString();
+                }
+                else if (personalizatBara.Checked)
+                {
+                    float lungime, numarbucati, pretpersonalizatfloat;
+
+                    float greutate = dataExtractor.FindMatchingRowGreutate(baraButton, materialBox, negruBaraButton, diamPa6ComboBox);
+
+                    float.TryParse(lungimePa6Box.Text, out lungime);
+                    float.TryParse(nrbucPa6Box.Text, out numarbucati);
+                    float.TryParse(pretpersonalizat.Text, out pretpersonalizatfloat);
+
+                    float baraRON1 =(float)Math.Pow(10,-3) * lungime * greutate * pretpersonalizatfloat * numarbucati;
+                    float baraEUR1 = (float)(baraRON1 / 5);
+
+                    baraRON.Text = baraRON1.ToString();
+                    baraEUR.Text = baraEUR1.ToString();
+                }
+
+            }
+
+            //Cazul in care bara este alba
+            if (albBaraButton.Checked)
+            {
+                if (prestabilitBara.Checked)
+                {
+                    float lungime, numarbucati;
+
+                    float pretkg = dataExtractor.FindMatchingRow(baraButton, materialBox, albBaraButton, diamPa6ComboBox);
+                    float greutate = dataExtractor.FindMatchingRowGreutate(baraButton, materialBox, albBaraButton, diamPa6ComboBox);
+
+                    float.TryParse(lungimePa6Box.Text, out lungime);
+                    float.TryParse(nrbucPa6Box.Text, out numarbucati);
+
+                    float baraRON1 = calcul.calculBara(lungime, greutate, pretkg) * numarbucati;
+                    float baraEUR1 = (float)(baraRON1 / 5);
+
+                    baraRON.Text = baraRON1.ToString();
+                    baraEUR.Text = baraEUR1.ToString();
+                }
+                else if (personalizatBara.Checked)
+                {
+                    float lungime, numarbucati, pretpersonalizatfloat;
+
+                    float greutate = dataExtractor.FindMatchingRowGreutate(baraButton, materialBox, albBaraButton, diamPa6ComboBox);
+
+                    float.TryParse(lungimePa6Box.Text, out lungime);
+                    float.TryParse(nrbucPa6Box.Text, out numarbucati);
+                    float.TryParse(pretpersonalizat.Text, out pretpersonalizatfloat);
+
+                    float baraRON1 = (float)Math.Pow(10, -3) * lungime * greutate * pretpersonalizatfloat * numarbucati;
+                    float baraEUR1 = (float)(baraRON1 / 5);
+
+                    baraRON.Text = baraRON1.ToString();
+                    baraEUR.Text = baraEUR1.ToString();
+                }
+            }
+        }
+
+        private void personalizatBara_CheckedChanged(object sender, EventArgs e)
+        {
+            if (personalizatBara.Checked)
+            {
+                pretpersonalizat.Visible = true;
+            }
+            else
+            {
+                pretpersonalizat.Visible = false;
+            }
+        }
+        private void pretpersonalizat_Enter(object sender, EventArgs e)
+        {
+            if (pretpersonalizat.Text == "Pret personalizat")
+            {
+                pretpersonalizat.Text = "";
+            }
+        }
+
+        private void pretpersonalizat_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(pretpersonalizat.Text))
+            {
+                pretpersonalizat.Text = "Pret personalizat";
             }
         }
     }
