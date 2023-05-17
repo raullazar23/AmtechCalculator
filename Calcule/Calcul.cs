@@ -10,7 +10,6 @@ namespace AmtechCalculator.Calcule
     class Calcul
     {
         protected double lungime, kgtotal, pretkg, pretfinal,latime;
-        string filePath = "D:\\AmtechCalculator\\DatabaseInfo.csv";
         public Calcul() { }
         public Calcul(double lungime, double kgtotal, double pretkg, double pretfinal, double latime)
         {
@@ -19,11 +18,6 @@ namespace AmtechCalculator.Calcule
             this.pretfinal = pretfinal;
             this.latime = latime;
             this.kgtotal = kgtotal;
-        }
-        
-        private void extrageDate()
-        {
-
         }
 
         public void calculPlaca(double lungime, double kgtotal, double pretkg, double latime)
