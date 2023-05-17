@@ -31,10 +31,7 @@
             exitButton = new Button();
             groupBox3 = new GroupBox();
             label15 = new Label();
-            comboBox1 = new ComboBox();
-            placaPanel = new Panel();
-            grosimeComboBox = new ComboBox();
-            label9 = new Label();
+            materialBox = new ComboBox();
             baraPanel = new Panel();
             ButonBara = new Button();
             diamPa6ComboBox = new ComboBox();
@@ -42,20 +39,23 @@
             label11 = new Label();
             label12 = new Label();
             lungimePa6Box = new TextBox();
-            textBox2 = new TextBox();
+            baraEUR = new TextBox();
             label13 = new Label();
             label14 = new Label();
-            textBox4 = new TextBox();
+            baraRON = new TextBox();
             label16 = new Label();
             label17 = new Label();
             nrbucPa6Box = new TextBox();
             groupBox4 = new GroupBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            negruBaraButton = new RadioButton();
+            albBaraButton = new RadioButton();
             groupBox5 = new GroupBox();
             textBox6 = new TextBox();
             radioButton3 = new RadioButton();
             radioButton4 = new RadioButton();
+            placaPanel = new Panel();
+            grosimeComboBox = new ComboBox();
+            label9 = new Label();
             ButonPlaca = new Button();
             label1 = new Label();
             label8 = new Label();
@@ -80,10 +80,10 @@
             baraButton = new RadioButton();
             placaButton = new RadioButton();
             groupBox3.SuspendLayout();
-            placaPanel.SuspendLayout();
             baraPanel.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
+            placaPanel.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -101,7 +101,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(label15);
-            groupBox3.Controls.Add(comboBox1);
+            groupBox3.Controls.Add(materialBox);
             groupBox3.Controls.Add(baraPanel);
             groupBox3.Controls.Add(placaPanel);
             groupBox3.Controls.Add(baraButton);
@@ -122,57 +122,14 @@
             label15.TabIndex = 25;
             label15.Text = "Material";
             // 
-            // comboBox1
+            // materialBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "PA6", "PA6.6", "POM", "PEHD1000", "PEHD500", "PEHD300", "PVC", "PP", "Plexiglass", "Policarbonat", "Textolit" });
-            comboBox1.Location = new Point(197, 16);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 25;
-            // 
-            // placaPanel
-            // 
-            placaPanel.Controls.Add(grosimeComboBox);
-            placaPanel.Controls.Add(label9);
-            placaPanel.Controls.Add(ButonPlaca);
-            placaPanel.Controls.Add(label1);
-            placaPanel.Controls.Add(label8);
-            placaPanel.Controls.Add(lungimeTextBox);
-            placaPanel.Controls.Add(euroTextBox);
-            placaPanel.Controls.Add(latimeTextBox);
-            placaPanel.Controls.Add(label7);
-            placaPanel.Controls.Add(label3);
-            placaPanel.Controls.Add(ronTextBox);
-            placaPanel.Controls.Add(label4);
-            placaPanel.Controls.Add(label2);
-            placaPanel.Controls.Add(label5);
-            placaPanel.Controls.Add(nrbucTextBox);
-            placaPanel.Controls.Add(label6);
-            placaPanel.Controls.Add(groupBox1);
-            placaPanel.Controls.Add(groupBox2);
-            placaPanel.Location = new Point(6, 52);
-            placaPanel.Name = "placaPanel";
-            placaPanel.Size = new Size(406, 251);
-            placaPanel.TabIndex = 26;
-            // 
-            // grosimeComboBox
-            // 
-            grosimeComboBox.FormattingEnabled = true;
-            grosimeComboBox.Items.AddRange(new object[] { "5mm", "10mm", "12mm", "15mm", "20mm", "25mm", "30mm", "35mm", "40mm", "45mm", "50mm" });
-            grosimeComboBox.Location = new Point(19, 30);
-            grosimeComboBox.Name = "grosimeComboBox";
-            grosimeComboBox.Size = new Size(121, 23);
-            grosimeComboBox.TabIndex = 1;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(273, 208);
-            label9.Name = "label9";
-            label9.Size = new Size(37, 15);
-            label9.TabIndex = 24;
-            label9.Text = "EURO";
+            materialBox.FormattingEnabled = true;
+            materialBox.Items.AddRange(new object[] { "PA6", "PA6.6", "POM", "PEHD1000", "PEHD500", "PEHD300", "PVC", "PP", "Plexiglass", "Policarbonat", "Textolit" });
+            materialBox.Location = new Point(197, 16);
+            materialBox.Name = "materialBox";
+            materialBox.Size = new Size(121, 23);
+            materialBox.TabIndex = 25;
             // 
             // baraPanel
             // 
@@ -182,10 +139,10 @@
             baraPanel.Controls.Add(label11);
             baraPanel.Controls.Add(label12);
             baraPanel.Controls.Add(lungimePa6Box);
-            baraPanel.Controls.Add(textBox2);
+            baraPanel.Controls.Add(baraEUR);
             baraPanel.Controls.Add(label13);
             baraPanel.Controls.Add(label14);
-            baraPanel.Controls.Add(textBox4);
+            baraPanel.Controls.Add(baraRON);
             baraPanel.Controls.Add(label16);
             baraPanel.Controls.Add(label17);
             baraPanel.Controls.Add(nrbucPa6Box);
@@ -204,11 +161,12 @@
             ButonBara.TabIndex = 25;
             ButonBara.Text = "Calculează!";
             ButonBara.UseVisualStyleBackColor = true;
+            ButonBara.Click += ButonBara_Click;
             // 
             // diamPa6ComboBox
             // 
             diamPa6ComboBox.FormattingEnabled = true;
-            diamPa6ComboBox.Items.AddRange(new object[] { "5mm", "10mm", "12mm", "15mm", "20mm", "25mm", "30mm", "35mm", "40mm", "45mm", "50mm" });
+            diamPa6ComboBox.Items.AddRange(new object[] { "5", "10", "12", "15", "20", "25", "30", "35", "40", "45", "50" });
             diamPa6ComboBox.Location = new Point(19, 30);
             diamPa6ComboBox.Name = "diamPa6ComboBox";
             diamPa6ComboBox.Size = new Size(121, 23);
@@ -249,13 +207,13 @@
             lungimePa6Box.Size = new Size(110, 23);
             lungimePa6Box.TabIndex = 6;
             // 
-            // textBox2
+            // baraEUR
             // 
-            textBox2.Location = new Point(209, 201);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(58, 23);
-            textBox2.TabIndex = 22;
+            baraEUR.Location = new Point(209, 201);
+            baraEUR.Margin = new Padding(3, 2, 3, 2);
+            baraEUR.Name = "baraEUR";
+            baraEUR.Size = new Size(58, 23);
+            baraEUR.TabIndex = 22;
             // 
             // label13
             // 
@@ -275,13 +233,13 @@
             label14.TabIndex = 8;
             label14.Text = "Lungime";
             // 
-            // textBox4
+            // baraRON
             // 
-            textBox4.Location = new Point(209, 174);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(58, 23);
-            textBox4.TabIndex = 20;
+            baraRON.Location = new Point(209, 174);
+            baraRON.Margin = new Padding(3, 2, 3, 2);
+            baraRON.Name = "baraRON";
+            baraRON.Size = new Size(58, 23);
+            baraRON.TabIndex = 20;
             // 
             // label16
             // 
@@ -311,8 +269,8 @@
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(radioButton1);
-            groupBox4.Controls.Add(radioButton2);
+            groupBox4.Controls.Add(negruBaraButton);
+            groupBox4.Controls.Add(albBaraButton);
             groupBox4.Location = new Point(184, 12);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(109, 41);
@@ -320,28 +278,28 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Culoare";
             // 
-            // radioButton1
+            // negruBaraButton
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(6, 22);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(58, 19);
-            radioButton1.TabIndex = 4;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Negru";
-            radioButton1.TextImageRelation = TextImageRelation.ImageAboveText;
-            radioButton1.UseVisualStyleBackColor = true;
+            negruBaraButton.AutoSize = true;
+            negruBaraButton.Location = new Point(6, 22);
+            negruBaraButton.Name = "negruBaraButton";
+            negruBaraButton.Size = new Size(58, 19);
+            negruBaraButton.TabIndex = 4;
+            negruBaraButton.TabStop = true;
+            negruBaraButton.Text = "Negru";
+            negruBaraButton.TextImageRelation = TextImageRelation.ImageAboveText;
+            negruBaraButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // albBaraButton
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(70, 22);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(43, 19);
-            radioButton2.TabIndex = 3;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Alb";
-            radioButton2.UseVisualStyleBackColor = true;
+            albBaraButton.AutoSize = true;
+            albBaraButton.Location = new Point(70, 22);
+            albBaraButton.Name = "albBaraButton";
+            albBaraButton.Size = new Size(43, 19);
+            albBaraButton.TabIndex = 3;
+            albBaraButton.TabStop = true;
+            albBaraButton.Text = "Alb";
+            albBaraButton.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -386,6 +344,49 @@
             radioButton4.TabIndex = 14;
             radioButton4.Text = "Personalizat";
             radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // placaPanel
+            // 
+            placaPanel.Controls.Add(grosimeComboBox);
+            placaPanel.Controls.Add(label9);
+            placaPanel.Controls.Add(ButonPlaca);
+            placaPanel.Controls.Add(label1);
+            placaPanel.Controls.Add(label8);
+            placaPanel.Controls.Add(lungimeTextBox);
+            placaPanel.Controls.Add(euroTextBox);
+            placaPanel.Controls.Add(latimeTextBox);
+            placaPanel.Controls.Add(label7);
+            placaPanel.Controls.Add(label3);
+            placaPanel.Controls.Add(ronTextBox);
+            placaPanel.Controls.Add(label4);
+            placaPanel.Controls.Add(label2);
+            placaPanel.Controls.Add(label5);
+            placaPanel.Controls.Add(nrbucTextBox);
+            placaPanel.Controls.Add(label6);
+            placaPanel.Controls.Add(groupBox1);
+            placaPanel.Controls.Add(groupBox2);
+            placaPanel.Location = new Point(6, 52);
+            placaPanel.Name = "placaPanel";
+            placaPanel.Size = new Size(406, 251);
+            placaPanel.TabIndex = 26;
+            // 
+            // grosimeComboBox
+            // 
+            grosimeComboBox.FormattingEnabled = true;
+            grosimeComboBox.Items.AddRange(new object[] { "5mm", "10mm", "12mm", "15mm", "20mm", "25mm", "30mm", "35mm", "40mm", "45mm", "50mm" });
+            grosimeComboBox.Location = new Point(19, 30);
+            grosimeComboBox.Name = "grosimeComboBox";
+            grosimeComboBox.Size = new Size(121, 23);
+            grosimeComboBox.TabIndex = 1;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(273, 208);
+            label9.Name = "label9";
+            label9.Size = new Size(37, 15);
+            label9.TabIndex = 24;
+            label9.Text = "EURO";
             // 
             // ButonPlaca
             // 
@@ -597,7 +598,7 @@
             baraButton.Name = "baraButton";
             baraButton.Size = new Size(48, 19);
             baraButton.TabIndex = 1;
-            baraButton.Text = "Bară";
+            baraButton.Text = "Bara";
             baraButton.UseVisualStyleBackColor = true;
             baraButton.CheckedChanged += baraButton_CheckedChanged;
             // 
@@ -626,14 +627,14 @@
             Load += Form1_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            placaPanel.ResumeLayout(false);
-            placaPanel.PerformLayout();
             baraPanel.ResumeLayout(false);
             baraPanel.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
+            placaPanel.ResumeLayout(false);
+            placaPanel.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -677,22 +678,22 @@
         private Label label11;
         private Label label12;
         private TextBox lungimePa6Box;
-        private TextBox textBox2;
+        private TextBox baraEUR;
         private Label label13;
         private Label label14;
-        private TextBox textBox4;
+        private TextBox baraRON;
         private Label label16;
         private Label label17;
         private TextBox nrbucPa6Box;
         private GroupBox groupBox4;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton negruBaraButton;
+        private RadioButton albBaraButton;
         private GroupBox groupBox5;
         private TextBox textBox6;
         private RadioButton radioButton3;
         private RadioButton radioButton4;
         private Label label15;
-        private ComboBox comboBox1;
+        private ComboBox materialBox;
         private Button ButonBara;
     }
 }

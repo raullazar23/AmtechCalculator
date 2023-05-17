@@ -51,7 +51,8 @@ namespace AmtechCalculator
             errorHandler.eroareValori(latimeTextBox, lungimeTextBox);
             errorHandler.eroareGrosime(grosimeComboBox);
             //---------------
-            Calcul calcul = new Calcul();
+
+
 
         }
 
@@ -89,5 +90,21 @@ namespace AmtechCalculator
             }
         }
 
+        private void ButonBara_Click(object sender, EventArgs e)
+        {
+            Calcul calcul = new Calcul();
+            DataExtractor dataExtractor = new DataExtractor();
+            if (negruBaraButton.Checked)
+            {
+                double lungime;
+                double pretkg = dataExtractor.FindMatchingRow(baraButton, materialBox, negruBaraButton, grosimeComboBox);
+                double greutate = dataExtractor.FindMatchingRow(baraButton, materialBox, negruBaraButton, grosimeComboBox);
+                double.TryParse(lungimePa6Box.Text, out lungime);
+                double baraRON1 = calcul.calculBara(lungime, greutate, pretkg);
+                double baraEUR1 = baraRON1 * 5;
+                baraRON.Text = baraRON1.ToString();
+                baraEUR.Text = baraEUR1.ToString();
+            }
+        }
     }
 }

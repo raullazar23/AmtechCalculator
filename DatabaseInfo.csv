@@ -1,2 +1,3 @@
-Nr. Crt.,Material,Culoare,Pretkg,Greutate,Forma
-1,Poliamida,Negru,15,200,Placa
+Nr. Crt.,Material,Culoare,Pretkg,Greutate,Forma,Grosime
+1,Poliamida,Negru,15,200,Placa,20mm
+2,PA6,Negru,30,300,Bara,20mm

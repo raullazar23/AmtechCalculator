@@ -7,9 +7,10 @@ using AmtechCalculator;
 
 namespace AmtechCalculator.Calcule
 {
-    class Calcul
+    class Calcul : DataExtractor
     {
         protected double lungime, kgtotal, pretkg, pretfinal,latime;
+        
         public Calcul() { }
         public Calcul(double lungime, double kgtotal, double pretkg, double pretfinal, double latime)
         {
@@ -20,14 +21,18 @@ namespace AmtechCalculator.Calcule
             this.kgtotal = kgtotal;
         }
 
-        public void calculPlaca(double lungime, double kgtotal, double pretkg, double latime)
+        
+
+        public void calculPlaca()
         {
+            
             pretfinal = kgtotal * lungime * Math.Pow(10,-3) + latime * Math.Pow(10,-3) * pretkg;
         }
 
-        public void calculBara(double lungime, double kgtotal, double pretkg)
+        public double calculBara(double lungime, double kgtotal, double pretkg)
         {
             pretfinal = lungime * kgtotal * pretkg;
+            return pretfinal;
         }
     }
 }
