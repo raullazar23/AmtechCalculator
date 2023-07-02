@@ -2,6 +2,8 @@ using AmtechCalculator.ErrorHandlers;
 using AmtechCalculator.Calcule;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using System.Configuration;
+using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace AmtechCalculator
 {
@@ -10,17 +12,22 @@ namespace AmtechCalculator
         public Form1()
         {
             InitializeComponent();
-
+            FormClosing += Form1_FormClosing;
         }
 
-        private DataExtractor extractor;
+        public DataExtractor extractor;
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+            Settings1.Default.Save();
         }
-
-        private void databaseButton_Click(object sender, EventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Save Settings
+            Settings1.Default.Save();
+        }
+        public void databaseButton_Click(object sender, EventArgs e)
         {
             string filePath = null;
 
@@ -31,6 +38,7 @@ namespace AmtechCalculator
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     filePath = openFileDialog1.FileName;
+                    Settings1.Default.path = filePath;
                 }
                 else
                 {
@@ -40,10 +48,6 @@ namespace AmtechCalculator
             }
             DataExtractor localExtractor = new DataExtractor(filePath);
             this.extractor = localExtractor;
-            // Save the path in the configuration file
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            config.AppSettings.Settings["FilePath"].Value = filePath;
-            config.Save(ConfigurationSaveMode.Modified);
 
             DataExtractor extractor = new DataExtractor(filePath);
             // Now the 'extractor' object is accessible to other methods within the class
@@ -87,18 +91,18 @@ namespace AmtechCalculator
             errorHandler.eroareCuloare(whiteButton, blackButton, radioVerdePlaca, radioUniversalPlaca);
             errorHandler.eroareValori(latimeTextBox, lungimeTextBox);
             errorHandler.eroareGrosime(grosimeTextBox);
-            //errorHandler.nopath(extractor);
+            errorHandler.nopath(extractor);
             //---------------
 
             Calcul calcul = new Calcul();
-
+            float rontextbox1, eurotextbox1;
 
 
             //Cazul in care placa este neagra
             if (blackButton.Checked)
             {
                 //Cazul in care se foloseste pretul din tabel
-                if (prestabilitButton.Checked)
+                if (clientPlaca.Checked)
                 {
                     float lungime, latime, numarbucati;
 
@@ -109,9 +113,10 @@ namespace AmtechCalculator
                     float.TryParse(latimeTextBox.Text, out latime);
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
 
-                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
-
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
@@ -126,19 +131,37 @@ namespace AmtechCalculator
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
                     float.TryParse(priceTextBox.Text, out pretpersonalizatfloat);
 
-                    float rontextbox1 = (float)(greutate * (lungime * Math.Pow(10, -3)) + (latime * Math.Pow(10, -3)) * pretpersonalizatfloat) * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
-
+                    rontextbox1 = (float)(greutate * (lungime * Math.Pow(10, -3)) + (latime * Math.Pow(10, -3)) * pretpersonalizatfloat) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
+                else if (distribuitorPlaca.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
             }
 
             //Cazul in care placa este alba
             if (whiteButton.Checked)
             {
-                if (prestabilitButton.Checked)
+                if (clientPlaca.Checked)
                 {
                     float lungime, latime, numarbucati;
 
@@ -149,9 +172,10 @@ namespace AmtechCalculator
                     float.TryParse(latimeTextBox.Text, out latime);
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
 
-                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
-
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
@@ -166,9 +190,28 @@ namespace AmtechCalculator
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
                     float.TryParse(priceTextBox.Text, out pretpersonalizatfloat);
 
-                    float rontextbox1 = ((float)Math.Pow(10, -3) * lungime) * ((float)Math.Pow(10, -3) * latime) * greutate * pretpersonalizatfloat * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
+                    rontextbox1 = ((float)Math.Pow(10, -3) * lungime) * ((float)Math.Pow(10, -3) * latime) * greutate * pretpersonalizatfloat * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
+                else if (distribuitorPlaca.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
@@ -176,7 +219,7 @@ namespace AmtechCalculator
             if (blackButton.Checked)
             {
                 //Cazul in care se foloseste pretul din tabel
-                if (prestabilitButton.Checked)
+                if (clientPlaca.Checked)
                 {
                     float lungime, latime, numarbucati;
 
@@ -187,9 +230,10 @@ namespace AmtechCalculator
                     float.TryParse(latimeTextBox.Text, out latime);
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
 
-                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
-
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
@@ -204,19 +248,37 @@ namespace AmtechCalculator
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
                     float.TryParse(priceTextBox.Text, out pretpersonalizatfloat);
 
-                    float rontextbox1 = (float)(greutate * (lungime * Math.Pow(10, -3)) + (latime * Math.Pow(10, -3)) * pretpersonalizatfloat) * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
-
+                    rontextbox1 = (float)(greutate * (lungime * Math.Pow(10, -3)) + (latime * Math.Pow(10, -3)) * pretpersonalizatfloat) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
+                else if (distribuitorPlaca.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
             }
 
             //Cazul in care placa este verde
             if (radioVerdePlaca.Checked)
             {
-                if (prestabilitButton.Checked)
+                if (clientPlaca.Checked)
                 {
                     float lungime, latime, numarbucati;
 
@@ -227,9 +289,10 @@ namespace AmtechCalculator
                     float.TryParse(latimeTextBox.Text, out latime);
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
 
-                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
-
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
@@ -244,9 +307,28 @@ namespace AmtechCalculator
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
                     float.TryParse(priceTextBox.Text, out pretpersonalizatfloat);
 
-                    float rontextbox1 = ((float)Math.Pow(10, -3) * lungime) * ((float)Math.Pow(10, -3) * latime) * greutate * pretpersonalizatfloat * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
+                    rontextbox1 = ((float)Math.Pow(10, -3) * lungime) * ((float)Math.Pow(10, -3) * latime) * greutate * pretpersonalizatfloat * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
+                else if (distribuitorPlaca.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
@@ -254,7 +336,7 @@ namespace AmtechCalculator
             //Cazul in care placa este universala
             if (radioUniversalPlaca.Checked)
             {
-                if (prestabilitButton.Checked)
+                if (clientPlaca.Checked)
                 {
                     float lungime, latime, numarbucati;
 
@@ -265,9 +347,10 @@ namespace AmtechCalculator
                     float.TryParse(latimeTextBox.Text, out latime);
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
 
-                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
-
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
@@ -282,13 +365,33 @@ namespace AmtechCalculator
                     float.TryParse(nrbucTextBox.Text, out numarbucati);
                     float.TryParse(priceTextBox.Text, out pretpersonalizatfloat);
 
-                    float rontextbox1 = ((float)Math.Pow(10, -3) * lungime) * ((float)Math.Pow(10, -3) * latime) * greutate * pretpersonalizatfloat * numarbucati;
-                    float eurotextbox1 = (float)(rontextbox1 / 5);
+                    rontextbox1 = ((float)Math.Pow(10, -3) * lungime) * ((float)Math.Pow(10, -3) * latime) * greutate * pretpersonalizatfloat * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
+                else if (distribuitorPlaca.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    eurotextbox1 = (float)(rontextbox1 / 5);
+                    float calculationResultRON = rontextbox1;
+                    float calculationResultEUR = eurotextbox1;
                     ronTextBox.Text = rontextbox1.ToString();
                     euroTextBox.Text = eurotextbox1.ToString();
                 }
             }
+            
 
         }
 
@@ -307,6 +410,10 @@ namespace AmtechCalculator
             baraPanel.Visible = false;
             this.KeyPreview = true; // Enable the form to receive key events
             this.KeyPress += new KeyPressEventHandler(Form1_KeyPress); // Attach the KeyPress event handler
+            if (extractor == null)
+            {
+                extractor = new DataExtractor(Settings1.Default.path);
+            }
         }
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -335,7 +442,7 @@ namespace AmtechCalculator
             errorHandler.eroareCuloare(albBaraButton, negruBaraButton, radioVerdeBara, radioUniversalBara);
             errorHandler.eroareValoareLungime(lungimePa6Box);
             errorHandler.eroareGrosime(diamTextBox);
-            //errorHandler.nopath(extractor);
+            errorHandler.nopath(extractor);
 
 
             Calcul calcul = new Calcul();
@@ -378,7 +485,23 @@ namespace AmtechCalculator
                     baraRON.Text = baraRON1.ToString();
                     baraEUR.Text = baraEUR1.ToString();
                 }
+                else if (distribuitorBara.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    float eurotextbox1 = (float)(rontextbox1 / 5);
+
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
             }
 
             //Cazul in care bara este alba
@@ -415,6 +538,23 @@ namespace AmtechCalculator
 
                     baraRON.Text = baraRON1.ToString();
                     baraEUR.Text = baraEUR1.ToString();
+                }
+                else if (distribuitorBara.Checked)
+                {
+                    float lungime, latime, numarbucati;
+
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    float eurotextbox1 = (float)(rontextbox1 / 5);
+
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
                 }
             }
             //Cazul in care bara este verde
@@ -453,7 +593,23 @@ namespace AmtechCalculator
                     baraRON.Text = baraRON1.ToString();
                     baraEUR.Text = baraEUR1.ToString();
                 }
+                else if (distribuitorBara.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    float eurotextbox1 = (float)(rontextbox1 / 5);
+
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
             }
             //Cazul in care bara este universala
             if (radioUniversalBara.Checked)
@@ -491,7 +647,23 @@ namespace AmtechCalculator
                     baraRON.Text = baraRON1.ToString();
                     baraEUR.Text = baraEUR1.ToString();
                 }
+                else if (distribuitorBara.Checked)
+                {
+                    float lungime, latime, numarbucati;
 
+                    float pretkg = extractor.FindMatchingRowd(placaButton, materialBox, blackButton, grosimeTextBox);
+                    float greutate = extractor.FindMatchingRowGreutate(placaButton, materialBox, blackButton, grosimeTextBox);
+
+                    float.TryParse(lungimeTextBox.Text, out lungime);
+                    float.TryParse(latimeTextBox.Text, out latime);
+                    float.TryParse(nrbucTextBox.Text, out numarbucati);
+
+                    float rontextbox1 = calcul.calculPlaca(lungime, latime, greutate, pretkg) * numarbucati;
+                    float eurotextbox1 = (float)(rontextbox1 / 5);
+
+                    ronTextBox.Text = rontextbox1.ToString();
+                    euroTextBox.Text = eurotextbox1.ToString();
+                }
             }
         }
 
