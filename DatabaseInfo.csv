@@ -1,4 +1,895 @@
-Nr. Crt.,Material,Culoare,Pretkg,Greutate,Forma,Grosime
-1,Poliamida,Negru,15,200,Placa,20
-2,PA6,Negru,10,0.456,Bara,20
-3,POM,Alb,10,56.4,Bara,30
+Nr. Crt.,Material,Culoare,Pretkg,Pretkgd,Greutate,Forma,Grosime
+1,PA 6 E,Alb,,,0.07,Bara,8
+2,PA 6 E,Alb,,,0.1,Bara,10
+3,PA 6 E,Alb,,,0.15,Bara,12
+4,PA 6 E,Alb,,,0.2,Bara,14
+5,PA 6 E,Alb,,,0.23,Bara,15
+6,PA 6 E,Alb,14.7,11,0.26,Bara,16
+7,PA 6 E,Alb,14.7,11,0.33,Bara,18
+8,PA 6 E,Alb,14.7,11,0.4,Bara,20
+9,PA 6 E,Alb,14.7,11,0.49,Bara,22
+10,PA 6 E,Alb,14.7,11,0.62,Bara,25
+11,PA 6 E,Alb,14.7,11,0.77,Bara,28
+12,PA 6 E,Alb,14.7,11,0.88,Bara,30
+13,PA 6 E,Alb,14.7,11,1,Bara,32
+14,PA 6 E,Alb,14.7,11,1.21,Bara,35
+15,PA 6 E,Alb,13,9.5,1.56,Bara,40
+16,PA 6 E,Alb,13,9.5,1.98,Bara,45
+17,PA 6 G,Alb,9.6,8,2.43,Bara,50
+18,PA 6 G,Alb,9.6,8,2.92,Bara,55
+19,PA 6 G,Alb,9.6,8,3.5,Bara,60
+20,PA 6 G,Alb,9.6,8,4.09,Bara,65
+21,PA 6 G,Alb,9.6,8,4.73,Bara,70
+22,PA 6 G,Alb,9.6,8,5.41,Bara,75
+23,PA 6 G,Alb,9.6,8,6.2,Bara,80
+24,PA 6 G,Alb,9.6,8,6.97,Bara,85
+25,PA 6 G,Alb,9.6,8,8.7,Bara,95
+26,PA 6 G,Alb,9.6,8,9.68,Bara,100
+27,PA 6 G,Alb,9.6,8,11.76,Bara,110
+28,PA 6 G,Alb,9.6,8,14.05,Bara,120
+29,PA 6 G,Alb,9.6,8,15.21,Bara,125
+30,PA 6 G,Alb,9.6,8,16.42,Bara,130
+31,PA 6 G,Alb,9.6,8,17.67,Bara,135
+32,PA 6 G,Alb,9.6,8,19.05,Bara,140
+33,PA 6 G,Alb,9.6,8,21.79,Bara,150
+34,PA 6 G,Alb,9.6,8,24.83,Bara,160
+35,PA 6 G,Alb,11.5,8.5,28.04,Bara,170
+36,PA 6 G,Alb,11.5,8.5,29.84,Bara,175
+37,PA 6 G,Alb,11.5,8.5,31.52,Bara,180
+38,PA 6 G,Alb,11.5,8.5,35.02,Bara,190
+39,PA 6 G,Alb,11.5,8.5,38.89,Bara,200
+40,PA 6 G,Alb,11.5,8.5,42.89,Bara,210
+41,PA 6 G,Alb,11.5,8.5,46.95,Bara,220
+42,PA 6 G,Alb,11.5,8.5,51.2,Bara,230
+43,PA 6 G,Alb,11.5,8.5,55.89,Bara,240
+44,PA 6 G,Alb,11.5,8.5,60.45,Bara,250
+45,PA 6 G,Alb,11.5,8.5,65.26,Bara,260
+46,PA 6 G,Alb,11.5,8.5,70.57,Bara,270
+47,PA 6 G,Alb,11.5,8.5,75.59,Bara,280
+48,PA 6 G,Alb,11.5,8.5,81.34,Bara,290
+49,PA 6 G,Alb,11.5,8.5,87.36,Bara,300
+,,,,,,,
+50,PA 6 E,Negru,,,0.07,Bara,8
+51,PA 6 E,Negru,,,0.1,Bara,10
+52,PA 6 E,Negru,,,0.15,Bara,12
+53,PA 6 E,Negru,,,0.2,Bara,14
+54,PA 6 E,Negru,,,0.23,Bara,15
+55,PA 6 E,Negru,14.8,11,0.26,Bara,16
+56,PA 6 E,Negru,14.8,11,0.33,Bara,18
+57,PA 6 E,Negru,14.8,11,0.4,Bara,20
+58,PA 6 E,Negru,14.8,11,0.49,Bara,22
+59,PA 6 E,Negru,14.8,11,0.62,Bara,25
+60,PA 6 E,Negru,14.8,11,0.77,Bara,28
+61,PA 6 E,Negru,14.8,11,0.88,Bara,30
+62,PA 6 E,Negru,14.8,11,1,Bara,32
+63,PA 6 E,Negru,14.8,11,1.21,Bara,35
+64,PA 6 E,Negru,13.6,9.6,1.56,Bara,40
+65,PA 6 E,Negru,13.6,9.6,1.98,Bara,45
+66,PA 6 G,Negru,9.6,8,2.43,Bara,50
+67,PA 6 G,Negru,9.6,8,2.92,Bara,55
+68,PA 6 G,Negru,9.6,8,3.5,Bara,60
+69,PA 6 G,Negru,9.6,8,4.09,Bara,65
+70,PA 6 G,Negru,9.6,8,4.73,Bara,70
+71,PA 6 G,Negru,9.6,8,5.41,Bara,75
+72,PA 6 G,Negru,9.6,8,6.2,Bara,80
+73,PA 6 G,Negru,9.6,8,6.97,Bara,85
+74,PA 6 G,Negru,9.6,8,8.7,Bara,95
+75,PA 6 G,Negru,9.6,8,9.68,Bara,100
+76,PA 6 G,Negru,9.6,8,11.76,Bara,110
+77,PA 6 G,Negru,9.6,8,14.05,Bara,120
+78,PA 6 G,Negru,9.6,8,15.21,Bara,125
+79,PA 6 G,Negru,9.6,8,16.42,Bara,130
+80,PA 6 G,Negru,9.6,8,17.67,Bara,135
+81,PA 6 G,Negru,9.6,8,19.05,Bara,140
+82,PA 6 G,Negru,9.6,8,21.79,Bara,150
+83,PA 6 G,Negru,9.6,8,24.83,Bara,160
+84,PA 6 G,Negru,11.5,8.7,28.04,Bara,170
+85,PA 6 G,Negru,11.5,8.7,29.84,Bara,175
+86,PA 6 G,Negru,11.5,8.7,31.52,Bara,180
+87,PA 6 G,Negru,11.5,8.7,35.02,Bara,190
+88,PA 6 G,Negru,11.5,8.7,38.89,Bara,200
+89,PA 6 G,Negru,11.5,8.7,42.89,Bara,210
+90,PA 6 G,Negru,11.5,8.7,46.95,Bara,220
+91,PA 6 G,Negru,11.5,8.7,51.2,Bara,230
+92,PA 6 G,Negru,11.5,8.7,55.89,Bara,240
+93,PA 6 G,Negru,11.5,8.7,60.45,Bara,250
+94,PA 6 G,Negru,11.5,8.7,65.26,Bara,260
+95,PA 6 G,Negru,11.5,8.7,70.57,Bara,270
+96,PA 6 G,Negru,11.5,8.7,75.59,Bara,280
+97,PA 6 G,Negru,11.5,8.7,81.34,Bara,290
+98,PA 6 G,Negru,11.5,8.7,87.36,Bara,300
+,,,,,,,
+99,PA 6 E,Alb,12,9.5,21.53,Placa,8
+100,PA 6 E,Alb,12,9.5,26.37,Placa,10
+101,PA 6 E,Alb,12,9.5,32.65,Placa,12
+102,PA 6 E,Negru,12.5,10,21.53,Placa,8
+103,PA 6 E,Negru,12.5,10,26.37,Placa,10
+104,PA 6 E,Negru,12.5,10,32.65,Placa,12
+,,,,,,,
+105,PA 6 G,Alb,8.8,7.5,40.1,Placa,15
+106,PA 6 G,Alb,8.8,7.5,52.3,Placa,20
+107,PA 6 G,Alb,8.8,7.5,64.4,Placa,25
+108,PA 6 G,Alb,8.8,7.5,76.6,Placa,30
+109,PA 6 G,Alb,8.8,7.5,88.7,Placa,35
+110,PA 6 G,Alb,8.8,7.5,102.1,Placa,40
+111,PA 6 G,Alb,8.8,7.5,114.2,Placa,45
+112,PA 6 G,Alb,8.8,7.5,126.4,Placa,50
+113,PA 6 G,Alb,8.8,7.5,138.5,Placa,55
+114,PA 6 G,Alb,8.8,7.5,153.1,Placa,60
+115,PA 6 G,Alb,8.8,7.5,165.3,Placa,65
+116,PA 6 G,Alb,8.8,7.5,177.4,Placa,70
+117,PA 6 G,Alb,8.8,7.5,189.6,Placa,75
+118,PA 6 G,Alb,8.8,7.5,203,Placa,80
+119,PA 6 G,Alb,8.8,7.5,215.1,Placa,85
+120,PA 6 G,Alb,8.8,7.5,227.3,Placa,90
+121,PA 6 G,Alb,8.8,7.5,239.4,Placa,95
+122,PA 6 G,Alb,8.8,7.5,251.6,Placa,100
+,,,,,,,
+123,PA 6 G,Negru,8.8,7.5,40.1,Placa,15
+124,PA 6 G,Negru,8.8,7.5,52.3,Placa,20
+125,PA 6 G,Negru,8.8,7.5,64.4,Placa,25
+126,PA 6 G,Negru,8.8,7.5,76.6,Placa,30
+127,PA 6 G,Negru,8.8,7.5,88.7,Placa,35
+128,PA 6 G,Negru,8.8,7.5,102.1,Placa,40
+129,PA 6 G,Negru,8.8,7.5,114.2,Placa,45
+130,PA 6 G,Negru,8.8,7.5,126.4,Placa,50
+131,PA 6 G,Negru,8.8,7.5,138.5,Placa,55
+132,PA 6 G,Negru,8.8,7.5,153.1,Placa,60
+133,PA 6 G,Negru,8.8,7.5,165.3,Placa,65
+134,PA 6 G,Negru,8.8,7.5,177.4,Placa,70
+135,PA 6 G,Negru,8.8,7.5,189.6,Placa,75
+136,PA 6 G,Negru,8.8,7.5,203,Placa,80
+137,PA 6 G,Negru,8.8,7.5,215.1,Placa,85
+138,PA 6 G,Negru,8.8,7.5,227.3,Placa,90
+139,PA 6 G,Negru,8.8,7.5,239.4,Placa,95
+140,PA 6 G,Negru,8.8,7.5,251.6,Placa,100
+,,,,,,,
+141,PA 6 E,Negru,9,7.7,39.91,Placa,
+142,PA 6 E,Negru,9,7.7,41.6,Placa,16
+143,PA 6 E,Negru,9,7.7,46.8,Placa,18
+144,PA 6 E,Negru,9,7.7,52.01,Placa,20
+145,PA 6 E,Negru,9,7.7,64.1,Placa,25
+146,PA 6 E,Negru,9,7.7,76.19,Placa,30
+147,PA 6 E,Negru,9,7.7,90.71,Placa,35
+148,PA 6 E,Negru,9,7.7,102.8,Placa,40
+149,PA 6 E,Negru,9,7.7,117.1,Placa,45
+150,PA 6 E,Negru,9,7.7,126.99,Placa,50
+151,PA 6 E,Negru,9,7.7,143.2,Placa,55
+152,PA 6 E,Negru,9,7.7,153.6,Placa,60
+153,PA 6 E,Negru,9,7.7,177.79,Placa,70
+154,PA 6 E,Negru,9,7.7,201.97,Placa,80
+155,PA 6 E,Negru,9,7.7,223.07,Placa,90
+156,PA 6 E,Negru,9,7.7,249.03,Placa,100
+,,,,,,,
+,POM,Alb,9,7.8,0.127,Bara,10
+,POM,Alb,9,7.8,0.185,Bara,12
+,POM,Alb,9,7.8,0.248,Bara,14
+,POM,Alb,9,7.8,0.283,Bara,15
+,POM,Alb,9,7.8,0.32,Bara,16
+,POM,Alb,9,7.8,0.41,Bara,18
+,POM,Alb,9,7.8,0.5,Bara,20
+,POM,Alb,9,7.8,0.61,Bara,22
+,POM,Alb,9,7.8,0.77,Bara,25
+,POM,Alb,9,7.8,0.96,Bara,28
+,POM,Alb,9,7.8,1.1,Bara,30
+,POM,Alb,9,7.8,1.25,Bara,32
+,POM,Alb,9,7.8,1.51,Bara,35
+,POM,Alb,9,7.8,1.95,Bara,40
+,POM,Alb,9,7.8,2.47,Bara,45
+,POM,Alb,9,7.8,3.03,Bara,50
+,POM,Alb,9,7.8,3.64,Bara,55
+,POM,Alb,9,7.8,4.37,Bara,60
+,POM,Alb,9,7.8,5.1,Bara,65
+,POM,Alb,9,7.8,5.9,Bara,70
+,POM,Alb,9,7.8,6.75,Bara,75
+,POM,Alb,9,7.8,7.74,Bara,80
+,POM,Alb,9,7.8,8.7,Bara,85
+,POM,Alb,9,7.8,9.77,Bara,90
+,POM,Alb,9,7.8,10.86,Bara,95
+,POM,Alb,9,7.8,12.08,Bara,100
+,POM,Alb,9,7.8,14.67,Bara,110
+,POM,Alb,9,7.8,17.53,Bara,120
+,POM,Alb,9,7.8,18.98,Bara,125
+,POM,Alb,9,7.8,20.49,Bara,130
+,POM,Alb,9,7.8,22.05,Bara,135
+,POM,Alb,9,7.8,23.77,Bara,140
+,POM,Alb,9,7.8,27.19,Bara,150
+,POM,Alb,9,7.8,30.98,Bara,160
+,POM,Alb,9,7.8,34.99,Bara,170
+,POM,Alb,9,7.8,37.23,Bara,175
+,POM,Alb,9,7.8,39.33,Bara,180
+,POM,Alb,9,7.8,43.7,Bara,190
+,POM,Alb,9,7.8,48.53,Bara,200
+,POM,Alb,9,7.8,53.52,Bara,210
+,POM,Alb,9,7.8,58.58,Bara,220
+,POM,Alb,9,7.8,63.89,Bara,230
+,POM,Alb,9,7.8,70.14,Bara,240
+,POM,Alb,9,7.8,75.43,Bara,250
+,POM,Alb,9,7.8,81.43,Bara,260
+,POM,Alb,9,7.8,88.45,Bara,270
+,POM,Alb,9,7.8,95.02,Bara,280
+,POM,Alb,9,7.8,101.83,Bara,290
+,POM,Alb,9,7.8,108.9,Bara,300
+,,,,,,,
+,POM,Negru,9.1,7.9,0.127,Bara,10
+,POM,Negru,9.1,7.9,0.185,Bara,12
+,POM,Negru,9.1,7.9,0.248,Bara,14
+,POM,Negru,9.1,7.9,0.283,Bara,15
+,POM,Negru,9.1,7.9,0.32,Bara,16
+,POM,Negru,9.1,7.9,0.41,Bara,18
+,POM,Negru,9.1,7.9,0.5,Bara,20
+,POM,Negru,9.1,7.9,0.61,Bara,22
+,POM,Negru,9.1,7.9,0.77,Bara,25
+,POM,Negru,9.1,7.9,0.96,Bara,28
+,POM,Negru,9.1,7.9,1.1,Bara,30
+,POM,Negru,9.1,7.9,1.25,Bara,32
+,POM,Negru,9.1,7.9,1.51,Bara,35
+,POM,Negru,9.1,7.9,1.95,Bara,40
+,POM,Negru,9.1,7.9,2.47,Bara,45
+,POM,Negru,9.1,7.9,3.03,Bara,50
+,POM,Negru,9.1,7.9,3.64,Bara,55
+,POM,Negru,9.1,7.9,4.37,Bara,60
+,POM,Negru,9.1,7.9,5.1,Bara,65
+,POM,Negru,9.1,7.9,5.9,Bara,70
+,POM,Negru,9.1,7.9,6.75,Bara,75
+,POM,Negru,9.1,7.9,7.74,Bara,80
+,POM,Negru,9.1,7.9,8.7,Bara,85
+,POM,Negru,9.1,7.9,9.77,Bara,90
+,POM,Negru,9.1,7.9,10.86,Bara,95
+,POM,Negru,9.1,7.9,12.08,Bara,100
+,POM,Negru,9.1,7.9,14.67,Bara,110
+,POM,Negru,9.1,7.9,17.53,Bara,120
+,POM,Negru,9.1,7.9,18.98,Bara,125
+,POM,Negru,9.1,7.9,20.49,Bara,130
+,POM,Negru,9.1,7.9,22.05,Bara,135
+,POM,Negru,9.1,7.9,23.77,Bara,140
+,POM,Negru,9.1,7.9,27.19,Bara,150
+,POM,Negru,9.1,7.9,30.98,Bara,160
+,POM,Negru,9.1,7.9,34.99,Bara,170
+,POM,Negru,9.1,7.9,37.23,Bara,175
+,POM,Negru,9.1,7.9,39.33,Bara,180
+,POM,Negru,9.1,7.9,43.7,Bara,190
+,POM,Negru,9.1,7.9,48.53,Bara,200
+,POM,Negru,9.1,7.9,53.52,Bara,210
+,POM,Negru,9.1,7.9,58.58,Bara,220
+,POM,Negru,9.1,7.9,63.89,Bara,230
+,POM,Negru,9.1,7.9,70.14,Bara,240
+,POM,Negru,9.1,7.9,75.43,Bara,250
+,POM,Negru,9.1,7.9,81.43,Bara,260
+,POM,Negru,9.1,7.9,88.45,Bara,270
+,POM,Negru,9.1,7.9,95.02,Bara,280
+,POM,Negru,9.1,7.9,101.83,Bara,290
+,POM,Negru,9.1,7.9,108.9,Bara,300
+,,,,,,,
+,POM,Alb,9,7.8,26.63,Placa,8
+,POM,Alb,9,7.8,32.61,Placa,10
+,POM,Alb,9,7.8,40.39,Placa,12
+,POM,Alb,9,7.8,49.36,Placa,15
+,POM,Alb,9,7.8,52.65,Placa,16
+,POM,Alb,9,7.8,59.23,Placa,18
+,POM,Alb,9,7.8,64.32,Placa,20
+,POM,Alb,9,7.8,79.28,Placa,25
+,POM,Alb,9,7.8,94.24,Placa,30
+,POM,Alb,9,7.8,112.19,Placa,35
+,POM,Alb,9,7.8,127.15,Placa,40
+,POM,Alb,9,7.8,142.11,Placa,45
+,POM,Alb,9,7.8,157.07,Placa,50
+,POM,Alb,9,7.8,189.98,Placa,60
+,POM,Alb,9,7.8,219.89,Placa,70
+,POM,Alb,9,7.8,249.81,Placa,80
+,POM,Alb,9,7.8,282.72,Placa,90
+,POM,Alb,9,7.8,315.63,Placa,100
+,POM,Alb,9,7.8,345.55,Placa,110
+,POM,Alb,13.5,10,391.92,Placa,125
+,POM,Alb,14,11,466.71,Placa,150
+,,,,,,,
+,POM,Negru,9.1,7.9,26.63,Placa,8
+,POM,Negru,9.1,7.9,32.61,Placa,10
+,POM,Negru,9.1,7.9,40.39,Placa,12
+,POM,Negru,9.1,7.9,49.36,Placa,15
+,POM,Negru,9.1,7.9,52.65,Placa,16
+,POM,Negru,9.1,7.9,59.23,Placa,18
+,POM,Negru,9.1,7.9,64.32,Placa,20
+,POM,Negru,9.1,7.9,79.28,Placa,25
+,POM,Negru,9.1,7.9,94.24,Placa,30
+,POM,Negru,9.1,7.9,112.19,Placa,35
+,POM,Negru,9.1,7.9,127.15,Placa,40
+,POM,Negru,9.1,7.9,142.11,Placa,45
+,POM,Negru,9.1,7.9,157.07,Placa,50
+,POM,Negru,9.1,7.9,189.98,Placa,60
+,POM,Negru,9.1,7.9,219.89,Placa,70
+,POM,Negru,9.1,7.9,249.81,Placa,80
+,POM,Negru,9.1,7.9,282.72,Placa,90
+,POM,Negru,9.1,7.9,315.63,Placa,100
+,POM,Negru,9.1,7.9,345.55,Placa,110
+,POM,Negru,13.5,10.5,391.92,Placa,125
+,POM,Negru,14,11,466.71,Placa,150
+,,,,,,,
+,PET,Alb,16,12,0.045,Bara,6
+,PET,Alb,16,12,0.08,Bara,8
+,PET,Alb,16,12,0.122,Bara,10
+,PET,Alb,16,12,0.179,Bara,12
+,PET,Alb,16,12,0.239,Bara,14
+,PET,Alb,16,12,0.273,Bara,15
+,PET,Alb,14,11,0.31,Bara,16
+,PET,Alb,14,11,0.4,Bara,18
+,PET,Alb,14,11,0.48,Bara,20
+,PET,Alb,14,11,0.59,Bara,22
+,PET,Alb,14,11,0.75,Bara,25
+,PET,Alb,14,11,0.93,Bara,28
+,PET,Alb,14,11,1.06,Bara,30
+,PET,Alb,14,11,1.2,Bara,32
+,PET,Alb,14,11,1.46,Bara,35
+,PET,Alb,12,9,1.88,Bara,40
+,PET,Alb,12,9,138,Bara,45
+,PET,Alb,12,9,2.92,Bara,50
+,PET,Alb,12,9,3.51,Bara,55
+,PET,Alb,12,9,4.21,Bara,60
+,PET,Alb,12,9,4.92,Bara,65
+,PET,Alb,12,9,5.69,Bara,70
+,PET,Alb,12,9,6.51,Bara,75
+,PET,Alb,12,9,7.46,Bara,80
+,PET,Alb,12,9,8.39,Bara,85
+,PET,Alb,12,9,9.42,Bara,90
+,PET,Alb,12,9,10.47,Bara,95
+,PET,Alb,12,9,11.65,Bara,100
+,PET,Alb,12,9,14.15,Bara,110
+,PET,Alb,12,9,16.91,Bara,120
+,PET,Alb,12,9,18.31,Bara,125
+,PET,Alb,12,9,19.76,Bara,130
+,PET,Alb,12,9,21.27,Bara,135
+,PET,Alb,12,9,22.93,Bara,140
+,PET,Alb,12,9,26.23,Bara,150
+,,,,,,,
+,PET,Negru,16,12,0.045,Bara,6
+,PET,Negru,16,12,0.08,Bara,8
+,PET,Negru,16,12,0.122,Bara,10
+,PET,Negru,16,12,0.179,Bara,12
+,PET,Negru,16,12,0.239,Bara,14
+,PET,Negru,16,12,0.273,Bara,15
+,PET,Negru,14,11,0.31,Bara,16
+,PET,Negru,14,11,0.4,Bara,18
+,PET,Negru,14.3,11.5,0.48,Bara,20
+,PET,Negru,14.3,11.5,0.59,Bara,22
+,PET,Negru,14.3,11.5,0.75,Bara,25
+,PET,Negru,14.3,11.5,0.93,Bara,28
+,PET,Negru,14.3,11.5,1.06,Bara,30
+,PET,Negru,14.3,11.5,1.2,Bara,32
+,PET,Negru,14.3,11.5,1.46,Bara,35
+,PET,Negru,11.8,9.5,1.88,Bara,40
+,PET,Negru,11.8,9.5,138,Bara,45
+,PET,Negru,11.8,9.5,2.92,Bara,50
+,PET,Negru,11.8,9.5,3.51,Bara,55
+,PET,Negru,11.8,9.5,4.21,Bara,60
+,PET,Negru,11.8,9.5,4.92,Bara,65
+,PET,Negru,11.8,9.5,5.69,Bara,70
+,PET,Negru,11.8,9.5,6.51,Bara,75
+,PET,Negru,11.8,9.5,7.46,Bara,80
+,PET,Negru,11.8,9.5,8.39,Bara,85
+,PET,Negru,11.8,9.5,9.42,Bara,90
+,PET,Negru,11.8,9.5,10.47,Bara,95
+,PET,Negru,11.8,9.5,11.65,Bara,100
+,PET,Negru,11.8,9.5,14.15,Bara,110
+,PET,Negru,11.8,9.5,16.91,Bara,120
+,PET,Negru,11.8,9.5,18.31,Bara,125
+,PET,Negru,11.8,9.5,19.76,Bara,130
+,PET,Negru,11.8,9.5,21.27,Bara,135
+,PET,Negru,11.8,9.5,22.93,Bara,140
+,PET,Negru,11.8,9.5,26.23,Bara,150
+,,,,,,,
+,PEEK,Universal,145,115,0.04,Bara,6
+,PEEK,Universal,145,115,0.05,Bara,8
+,PEEK,Universal,145,115,0.1,Bara,10
+,PEEK,Universal,145,115,0.26,Bara,16
+,PEEK,Universal,145,115,0.41,Bara,20
+,PEEK,Universal,145,115,0.64,Bara,25
+,PEEK,Universal,145,115,0.92,Bara,30
+,PEEK,Universal,145,115,1.64,Bara,40
+,PEEK,Universal,145,115,2.55,Bara,50
+,PEEK,Universal,145,115,3.68,Bara,60
+,PEEK,Universal,145,115,5,Bara,70
+,PEEK,Universal,145,115,7.1,Bara,80
+,PEEK,Universal,145,115,9,Bara,90
+,PEEK,Universal,145,115,10.21,Bara,100
+,,,,,,,
+,PP,Universal,8,6.2,0.34,Bara,20
+,PP,Universal,8,6.2,0.42,Bara,22
+,PP,Universal,8,6.2,0.53,Bara,25
+,PP,Universal,8,6.2,0.65,Bara,28
+,PP,Universal,8,6.2,0.75,Bara,30
+,PP,Universal,8,6.2,0.85,Bara,32
+,PP,Universal,8,6.2,1.03,Bara,35
+,PP,Universal,8,6.2,1.32,Bara,40
+,PP,Universal,8,6.2,1.68,Bara,45
+,PP,Universal,8,6.2,2.06,Bara,50
+,PP,Universal,8,6.2,2.47,Bara,55
+,PP,Universal,8,6.2,2.97,Bara,60
+,PP,Universal,8,6.2,3.47,Bara,65
+,PP,Universal,8,6.2,4.01,Bara,70
+,PP,Universal,8,6.2,4.58,Bara,75
+,PP,Universal,8,6.2,5.25,Bara,80
+,PP,Universal,8,6.2,5.91,Bara,85
+,PP,Universal,8,6.2,6.64,Bara,90
+,PP,Universal,8,6.2,7.37,Bara,95
+,PP,Universal,8,6.2,8.2,Bara,100
+,PP,Universal,8,6.2,9.97,Bara,110
+,PP,Universal,8,6.2,11.91,Bara,120
+,PP,Universal,8,6.2,12.89,Bara,125
+,PP,Universal,8,6.2,13.92,Bara,130
+,PP,Universal,8,6.2,14.97,Bara,135
+,PP,Universal,8,6.2,16.14,Bara,140
+,PP,Universal,8,6.2,18.47,Bara,150
+,PP,Universal,8,6.2,21.04,Bara,160
+,PP,Universal,8,6.2,23.76,Bara,170
+,PP,Universal,8,6.2,25.29,Bara,175
+,PP,Universal,8,6.2,26.71,Bara,180
+,PP,Universal,8,6.2,29.68,Bara,190
+,PP,Universal,8,6.2,32.96,Bara,200
+,,,,,,,
+,PP,Universal,5.2,3.7,10,Placa,5
+,PP,Universal,5.2,3.7,12,Placa,6
+,PP,Universal,5.2,3.7,14,Placa,7
+,PP,Universal,5.2,3.7,16,Placa,8
+,PP,Universal,5.2,3.7,18,Placa,9
+,PP,Universal,5.2,3.7,20,Placa,10
+,PP,Universal,5.2,3.7,24,Placa,12
+,PP,Universal,5.2,3.7,30,Placa,15
+,PP,Universal,5.2,3.7,36,Placa,18
+,PP,Universal,5.2,3.7,40,Placa,20
+,PP,Universal,5.2,3.7,44,Placa,22
+,PP,Universal,5.2,3.7,50,Placa,25
+,PP,Universal,5.2,3.7,60,Placa,30
+,PP,Universal,5.2,3.7,70,Placa,35
+,PP,Universal,5.2,3.7,80,Placa,40
+,PP,Universal,5.2,3.7,90,Placa,45
+,PP,Universal,5.2,3.7,100,Placa,50
+,PP,Universal,5.2,3.7,120,Placa,60
+,PP,Universal,5.2,3.7,140,Placa,70
+,,,,,,,
+,PTFE,Universal,21,17,0.173,Bara,10
+,PTFE,Universal,21,17,0.27,Bara,12
+,PTFE,Universal,21,17,0.42,Bara,15
+,PTFE,Universal,21,17,0.462,Bara,16
+,PTFE,Universal,21,17,0.525,Bara,17
+,PTFE,Universal,21,17,0.722,Bara,20
+,PTFE,Universal,21,17,1.15,Bara,25
+,PTFE,Universal,21,17,1.68,Bara,30
+,PTFE,Universal,21,17,2.28,Bara,35
+,PTFE,Universal,21,17,2.85,Bara,40
+,PTFE,Universal,21,17,3.69,Bara,45
+,PTFE,Universal,21,17,4.65,Bara,50
+,PTFE,Universal,21,17,5.58,Bara,55
+,PTFE,Universal,21,17,6.58,Bara,60
+,PTFE,Universal,21,17,7.31,Bara,65
+,PTFE,Universal,21,17,8.88,Bara,70
+,PTFE,Universal,21,17,"10,000",Bara,75
+,PTFE,Universal,21,17,"11,000",Bara,80
+,PTFE,Universal,21,17,12.48,Bara,85
+,PTFE,Universal,21,17,14.78,Bara,90
+,PTFE,Universal,21,17,16.58,Bara,95
+,PTFE,Universal,21,17,"18,000",Bara,100
+,,,,,,,
+,PTFE,Universal,21,17,18.9,Placa,4
+,PTFE,Universal,21,17,23.5,Placa,5
+,PTFE,Universal,21,17,29.1,Placa,6
+,PTFE,Universal,21,17,39.4,Placa,8
+,PTFE,Universal,21,17,47.9,Placa,10
+,PTFE,Universal,21,17,58,Placa,12
+,PTFE,Universal,21,17,71.6,Placa,15
+,PTFE,Universal,21,17,95.4,Placa,20
+,PTFE,Universal,21,17,118.3,Placa,25
+,PTFE,Universal,21,17,142.9,Placa,30
+,PTFE,Universal,21,17,189.8,Placa,40
+,PTFE,Universal,21,17,232.5,Placa,50
+,,,,,,,
+,PVC,Universal,6.2,4.5,0.283,Bara,15
+,PVC,Universal,6.2,4.5,0.32,Bara,16
+,PVC,Universal,6.2,4.5,0.41,Bara,18
+,PVC,Universal,6.2,4.5,0.5,Bara,20
+,PVC,Universal,6.2,4.5,0.61,Bara,22
+,PVC,Universal,6.2,4.5,0.77,Bara,25
+,PVC,Universal,6.2,4.5,0.96,Bara,28
+,PVC,Universal,6.2,4.5,1.1,Bara,30
+,PVC,Universal,6.2,4.5,1.25,Bara,32
+,PVC,Universal,6.2,4.5,1.51,Bara,35
+,PVC,Universal,6.2,4.5,1.95,Bara,40
+,PVC,Universal,6.2,4.5,2.47,Bara,45
+,PVC,Universal,6.2,4.5,3.03,Bara,50
+,PVC,Universal,6.2,4.5,3.64,Bara,55
+,PVC,Universal,6.2,4.5,4.37,Bara,60
+,PVC,Universal,6.2,4.5,5.1,Bara,65
+,PVC,Universal,6.2,4.5,5.9,Bara,70
+,PVC,Universal,6.2,4.5,6.75,Bara,75
+,PVC,Universal,6.2,4.5,7.74,Bara,80
+,PVC,Universal,6.2,4.5,8.7,Bara,85
+,PVC,Universal,6.2,4.5,9.77,Bara,90
+,PVC,Universal,6.2,4.5,10.86,Bara,95
+,PVC,Universal,6.2,4.5,12.08,Bara,100
+,PVC,Universal,6.2,4.5,14.67,Bara,110
+,PVC,Universal,6.2,4.5,17.53,Bara,120
+,,,,,,,
+,PE1000,Negru,13,11,0.03,Bara,6
+,PE1000,Negru,13,11,0.06,Bara,8
+,PE1000,Negru,13,11,0.09,Bara,10
+,PE1000,Negru,13,11,0.13,Bara,12
+,PE1000,Negru,13,11,0.17,Bara,14
+,PE1000,Negru,13,11,0.19,Bara,15
+,PE1000,Negru,13,11,0.22,Bara,16
+,PE1000,Negru,13,11,0.28,Bara,18
+,PE1000,Negru,13,11,0.34,Bara,20
+,PE1000,Negru,13,11,0.42,Bara,22
+,PE1000,Negru,9.2,7.3,0.53,Bara,25
+,PE1000,Negru,9.2,7.3,0.65,Bara,28
+,PE1000,Negru,9.2,7.3,0.75,Bara,30
+,PE1000,Negru,9.2,7.3,0.85,Bara,32
+,PE1000,Negru,9.2,7.3,1.03,Bara,35
+,PE1000,Negru,9.2,7.3,1.32,Bara,40
+,PE1000,Negru,9.2,7.3,1.68,Bara,45
+,PE1000,Negru,8.6,6.8,2.06,Bara,50
+,PE1000,Negru,8.6,6.8,2.47,Bara,55
+,PE1000,Negru,8.6,6.8,2.97,Bara,60
+,PE1000,Negru,8.6,6.8,3.47,Bara,65
+,PE1000,Negru,8.6,6.8,4.01,Bara,70
+,PE1000,Negru,8.6,6.8,4.58,Bara,75
+,PE1000,Negru,8.6,6.8,5.25,Bara,80
+,PE1000,Negru,8.6,6.8,5.91,Bara,85
+,PE1000,Negru,8.6,6.8,6.64,Bara,90
+,PE1000,Negru,8.6,6.8,7.37,Bara,95
+,PE1000,Negru,8.6,6.8,8.2,Bara,100
+,PE1000,Negru,8.6,6.8,9.97,Bara,110
+,PE1000,Negru,8.6,6.8,11.91,Bara,120
+,PE1000,Negru,8.6,6.8,12.89,Bara,125
+,PE1000,Negru,8.6,6.8,13.92,Bara,130
+,PE1000,Negru,8.6,6.8,14.97,Bara,135
+,PE1000,Negru,8.6,6.8,16.14,Bara,140
+,PE1000,Negru,8.6,6.8,18.47,Bara,150
+,PE1000,Negru,8.6,6.8,21.04,Bara,160
+,PE1000,Negru,8.6,6.8,23.76,Bara,170
+,PE1000,Negru,8.6,6.8,25.29,Bara,175
+,PE1000,Negru,8.6,6.8,26.71,Bara,180
+,PE1000,Negru,8.6,6.8,29.68,Bara,190
+,PE1000,Negru,8.6,6.8,32.96,Bara,200
+,,,,,,,
+,PE1000,Alb,13,11,0.03,Bara,6
+,PE1000,Alb,13,11,0.06,Bara,8
+,PE1000,Alb,13,11,0.09,Bara,10
+,PE1000,Alb,13,11,0.13,Bara,12
+,PE1000,Alb,13,11,0.17,Bara,14
+,PE1000,Alb,13,11,0.19,Bara,15
+,PE1000,Alb,13,11,0.22,Bara,16
+,PE1000,Alb,13,11,0.28,Bara,18
+,PE1000,Alb,13,11,0.34,Bara,20
+,PE1000,Alb,13,11,0.42,Bara,22
+,PE1000,Alb,9.2,7.3,0.53,Bara,25
+,PE1000,Alb,9.2,7.3,0.65,Bara,28
+,PE1000,Alb,9.2,7.3,0.75,Bara,30
+,PE1000,Alb,9.2,7.3,0.85,Bara,32
+,PE1000,Alb,9.2,7.3,1.03,Bara,35
+,PE1000,Alb,9.2,7.3,1.32,Bara,40
+,PE1000,Alb,9.2,7.3,1.68,Bara,45
+,PE1000,Alb,8.3,6.5,2.06,Bara,50
+,PE1000,Alb,8.3,6.5,2.47,Bara,55
+,PE1000,Alb,8.3,6.5,2.97,Bara,60
+,PE1000,Alb,8.3,6.5,3.47,Bara,65
+,PE1000,Alb,8.3,6.5,4.01,Bara,70
+,PE1000,Alb,8.3,6.5,4.58,Bara,75
+,PE1000,Alb,8.3,6.5,5.25,Bara,80
+,PE1000,Alb,8.3,6.5,5.91,Bara,85
+,PE1000,Alb,8.3,6.5,6.64,Bara,90
+,PE1000,Alb,8.3,6.5,7.37,Bara,95
+,PE1000,Alb,8.3,6.5,8.2,Bara,100
+,PE1000,Alb,8.3,6.5,9.97,Bara,110
+,PE1000,Alb,8.3,6.5,11.91,Bara,120
+,PE1000,Alb,8.3,6.5,12.89,Bara,125
+,PE1000,Alb,8.3,6.5,13.92,Bara,130
+,PE1000,Alb,8.3,6.5,14.97,Bara,135
+,PE1000,Alb,8.3,6.5,16.14,Bara,140
+,PE1000,Alb,8.3,6.5,18.47,Bara,150
+,PE1000,Alb,8.3,6.5,21.04,Bara,160
+,PE1000,Alb,8.3,6.5,23.76,Bara,170
+,PE1000,Alb,8.3,6.5,25.29,Bara,175
+,PE1000,Alb,8.3,6.5,26.71,Bara,180
+,PE1000,Alb,8.3,6.5,29.68,Bara,190
+,PE1000,Alb,8.3,6.5,32.96,Bara,200
+,,,,,,,
+,PE1000,Verde,13,11,0.03,Bara,6
+,PE1000,Verde,13,11,0.06,Bara,8
+,PE1000,Verde,13,11,0.09,Bara,10
+,PE1000,Verde,13,11,0.13,Bara,12
+,PE1000,Verde,13,11,0.17,Bara,14
+,PE1000,Verde,13,11,0.19,Bara,15
+,PE1000,Verde,13,11,0.22,Bara,16
+,PE1000,Verde,13,11,0.28,Bara,18
+,PE1000,Verde,13,11,0.34,Bara,20
+,PE1000,Verde,13,11,0.42,Bara,22
+,PE1000,Verde,9.2,7.3,0.53,Bara,25
+,PE1000,Verde,9.2,7.3,0.65,Bara,28
+,PE1000,Verde,9.2,7.3,0.75,Bara,30
+,PE1000,Verde,9.2,7.3,0.85,Bara,32
+,PE1000,Verde,9.2,7.3,1.03,Bara,35
+,PE1000,Verde,9.2,7.3,1.32,Bara,40
+,PE1000,Verde,9.2,7.3,1.68,Bara,45
+,PE1000,Verde,8.6,6.8,2.06,Bara,50
+,PE1000,Verde,8.6,6.8,2.47,Bara,55
+,PE1000,Verde,8.6,6.8,2.97,Bara,60
+,PE1000,Verde,8.6,6.8,3.47,Bara,65
+,PE1000,Verde,8.6,6.8,4.01,Bara,70
+,PE1000,Verde,8.6,6.8,4.58,Bara,75
+,PE1000,Verde,8.6,6.8,5.25,Bara,80
+,PE1000,Verde,8.6,6.8,5.91,Bara,85
+,PE1000,Verde,8.6,6.8,6.64,Bara,90
+,PE1000,Verde,8.6,6.8,7.37,Bara,95
+,PE1000,Verde,8.6,6.8,8.2,Bara,100
+,PE1000,Verde,8.6,6.8,9.97,Bara,110
+,PE1000,Verde,8.6,6.8,11.91,Bara,120
+,PE1000,Verde,8.6,6.8,12.89,Bara,125
+,PE1000,Verde,8.6,6.8,13.92,Bara,130
+,PE1000,Verde,8.6,6.8,14.97,Bara,135
+,PE1000,Verde,8.6,6.8,16.14,Bara,140
+,PE1000,Verde,8.6,6.8,18.47,Bara,150
+,PE1000,Verde,8.6,6.8,21.04,Bara,160
+,PE1000,Verde,8.6,6.8,23.76,Bara,170
+,PE1000,Verde,8.6,6.8,25.29,Bara,175
+,PE1000,Verde,8.6,6.8,26.71,Bara,180
+,PE1000,Verde,8.6,6.8,29.68,Bara,190
+,PE1000,Verde,8.6,6.8,32.96,Bara,200
+,,,,,,,
+,PE1000,Alb,7.5,6,10,Placa,5
+,PE1000,Alb,7.5,6,12,Placa,6
+,PE1000,Alb,7.5,6,14,Placa,7
+,PE1000,Alb,7.5,6,16,Placa,8
+,PE1000,Alb,7.5,6,18,Placa,9
+,PE1000,Alb,7.5,6,20,Placa,10
+,PE1000,Alb,7.5,6,24,Placa,12
+,PE1000,Alb,7.5,6,30,Placa,15
+,PE1000,Alb,7.5,6,36,Placa,18
+,PE1000,Alb,7.5,6,40,Placa,20
+,PE1000,Alb,7.5,6,44,Placa,22
+,PE1000,Alb,7.5,6,50,Placa,25
+,PE1000,Alb,7.5,6,60,Placa,30
+,PE1000,Alb,7.5,6,70,Placa,35
+,PE1000,Alb,7.5,6,80,Placa,40
+,PE1000,Alb,7.5,6,90,Placa,45
+,PE1000,Alb,7.5,6,100,Placa,50
+,PE1000,Alb,7.5,6,110,Placa,55
+,PE1000,Alb,7.5,6,120,Placa,60
+,PE1000,Alb,7.5,6,130,Placa,65
+,PE1000,Alb,7.5,6,140,Placa,70
+,PE1000,Alb,7.5,6,150,Placa,75
+,PE1000,Alb,8.1,6.4,160,Placa,80
+,PE1000,Alb,8.1,6.4,170,Placa,85
+,PE1000,Alb,8.1,6.4,180,Placa,90
+,PE1000,Alb,8.1,6.4,190,Placa,95
+,PE1000,Alb,8.5,6.7,200,Placa,100
+,PE1000,Alb,8.5,6.7,220,Placa,110
+,PE1000,Alb,8.5,6.7,240,Placa,120
+,PE1000,Alb,8.5,6.7,260,Placa,130
+,PE1000,Alb,8.5,6.7,280,Placa,140
+,PE1000,Alb,8.5,6.7,300,Placa,150
+,PE1000,Alb,8.5,6.7,320,Placa,160
+,PE1000,Alb,8.5,6.7,340,Placa,170
+,PE1000,Alb,8.5,6.7,360,Placa,180
+,PE1000,Alb,8.5,6.7,380,Placa,190
+,PE1000,Alb,8.5,6.7,400,Placa,200
+,,,,,,,
+,PE1000,Negru,7.7,6.1,10,Placa,5
+,PE1000,Negru,7.7,6.1,12,Placa,6
+,PE1000,Negru,7.7,6.1,14,Placa,7
+,PE1000,Negru,7.7,6.1,16,Placa,8
+,PE1000,Negru,7.7,6.1,18,Placa,9
+,PE1000,Negru,7.7,6.1,20,Placa,10
+,PE1000,Negru,7.7,6.1,24,Placa,12
+,PE1000,Negru,7.7,6.1,30,Placa,15
+,PE1000,Negru,7.7,6.1,36,Placa,18
+,PE1000,Negru,7.7,6.1,40,Placa,20
+,PE1000,Negru,7.7,6.1,44,Placa,22
+,PE1000,Negru,7.7,6.1,50,Placa,25
+,PE1000,Negru,7.7,6.1,60,Placa,30
+,PE1000,Negru,7.7,6.1,70,Placa,35
+,PE1000,Negru,7.7,6.1,80,Placa,40
+,PE1000,Negru,7.7,6.1,90,Placa,45
+,PE1000,Negru,7.7,6.1,100,Placa,50
+,PE1000,Negru,7.7,6.1,110,Placa,55
+,PE1000,Negru,7.7,6.1,120,Placa,60
+,PE1000,Negru,7.7,6.1,130,Placa,65
+,PE1000,Negru,7.7,6.1,140,Placa,70
+,PE1000,Negru,7.7,6.1,150,Placa,75
+,PE1000,Negru,8.1,6.4,160,Placa,80
+,PE1000,Negru,8.1,6.4,170,Placa,85
+,PE1000,Negru,8.1,6.4,180,Placa,90
+,PE1000,Negru,8.1,6.4,190,Placa,95
+,PE1000,Negru,8.5,6.7,200,Placa,100
+,PE1000,Negru,8.5,6.7,220,Placa,110
+,PE1000,Negru,8.5,6.7,240,Placa,120
+,PE1000,Negru,8.5,6.7,260,Placa,130
+,PE1000,Negru,8.5,6.7,280,Placa,140
+,PE1000,Negru,8.5,6.7,300,Placa,150
+,PE1000,Negru,8.5,6.7,320,Placa,160
+,PE1000,Negru,8.5,6.7,340,Placa,170
+,PE1000,Negru,8.5,6.7,360,Placa,180
+,PE1000,Negru,8.5,6.7,380,Placa,190
+,PE1000,Negru,8.5,6.7,400,Placa,200
+,,,,,,,
+,PE1000,Verde,9,7.1,10,Placa,5
+,PE1000,Verde,9,7.1,12,Placa,6
+,PE1000,Verde,9,7.1,14,Placa,7
+,PE1000,Verde,9,7.1,16,Placa,8
+,PE1000,Verde,9,7.1,18,Placa,9
+,PE1000,Verde,9,7.1,20,Placa,10
+,PE1000,Verde,9,7.1,24,Placa,12
+,PE1000,Verde,8,6.2,30,Placa,15
+,PE1000,Verde,8,6.2,36,Placa,18
+,PE1000,Verde,7.7,6,40,Placa,20
+,PE1000,Verde,7.7,6,44,Placa,22
+,PE1000,Verde,7.7,6,50,Placa,25
+,PE1000,Verde,7.7,6,60,Placa,30
+,PE1000,Verde,7.7,6,70,Placa,35
+,PE1000,Verde,7.7,6,80,Placa,40
+,PE1000,Verde,7.7,6,90,Placa,45
+,PE1000,Verde,7.7,6,100,Placa,50
+,PE1000,Verde,7.7,6,110,Placa,55
+,PE1000,Verde,7.7,6,120,Placa,60
+,PE1000,Verde,7.7,6,130,Placa,65
+,PE1000,Verde,7.7,6,140,Placa,70
+,PE1000,Verde,7.7,6,150,Placa,75
+,PE1000,Verde,8.6,6.8,160,Placa,80
+,PE1000,Verde,8.6,6.8,170,Placa,85
+,PE1000,Verde,8.6,6.8,180,Placa,90
+,PE1000,Verde,8.6,6.8,190,Placa,95
+,PE1000,Verde,8.6,6.8,200,Placa,100
+,PE1000,Verde,8.6,6.8,220,Placa,110
+,PE1000,Verde,8.6,6.8,240,Placa,120
+,PE1000,Verde,8.6,6.8,260,Placa,130
+,PE1000,Verde,8.6,6.8,280,Placa,140
+,PE1000,Verde,8.6,6.8,300,Placa,150
+,PE1000,Verde,8.6,6.8,320,Placa,160
+,PE1000,Verde,8.6,6.8,340,Placa,170
+,PE1000,Verde,8.6,6.8,360,Placa,180
+,PE1000,Verde,8.6,6.8,380,Placa,190
+,PE1000,Verde,8.6,6.8,400,Placa,200
+,,,,,,,
+,PE500,Alb,4.4,3.2,0.34,Bara,20
+,PE500,Alb,4.4,3.2,0.42,Bara,22
+,PE500,Alb,4.4,3.2,0.53,Bara,25
+,PE500,Alb,4.4,3.2,0.65,Bara,28
+,PE500,Alb,4.4,3.2,0.75,Bara,30
+,PE500,Alb,4.4,3.2,0.85,Bara,32
+,PE500,Alb,4.4,3.2,1.03,Bara,35
+,PE500,Alb,4.4,3.2,1.32,Bara,40
+,PE500,Alb,4.4,3.2,1.68,Bara,45
+,PE500,Alb,4.4,3.2,2.06,Bara,50
+,PE500,Alb,4.4,3.2,2.47,Bara,55
+,PE500,Alb,4.4,3.2,2.97,Bara,60
+,PE500,Alb,4.4,3.2,3.47,Bara,65
+,PE500,Alb,4.4,3.2,4.01,Bara,70
+,PE500,Alb,4.4,3.2,4.58,Bara,75
+,PE500,Alb,4.4,3.2,5.25,Bara,80
+,PE500,Alb,4.4,3.2,5.91,Bara,85
+,PE500,Alb,4.4,3.2,6.64,Bara,90
+,PE500,Alb,4.4,3.2,7.37,Bara,95
+,PE500,Alb,4.4,3.2,8.2,Bara,100
+,PE500,Alb,4.4,3.2,9.97,Bara,110
+,PE500,Alb,4.4,3.2,11.91,Bara,120
+,PE500,Alb,4.4,3.2,12.89,Bara,125
+,PE500,Alb,4.4,3.2,13.92,Bara,130
+,PE500,Alb,4.4,3.2,14.97,Bara,135
+,PE500,Alb,4.4,3.2,16.14,Bara,140
+,PE500,Alb,4.4,3.2,18.47,Bara,150
+,PE500,Alb,4.4,3.2,21.04,Bara,160
+,PE500,Alb,4.4,3.2,23.76,Bara,170
+,PE500,Alb,4.4,3.2,25.29,Bara,175
+,PE500,Alb,4.4,3.2,26.71,Bara,180
+,PE500,Alb,4.4,3.2,29.68,Bara,190
+,PE500,Alb,4.4,3.2,32.96,Bara,200
+,PE500,Alb,4.4,3.2,36.35,Bara,210
+,PE500,Alb,4.4,3.2,39.79,Bara,225
+,PE500,Alb,4.4,3.2,43.39,Bara,230
+,PE500,Alb,4.4,3.2,47.36,Bara,240
+,PE500,Alb,4.4,3.2,51.23,Bara,250
+,,,,,,,
+,PE500,Negru,4.4,3.2,0.34,Bara,20
+,PE500,Negru,4.4,3.2,0.42,Bara,22
+,PE500,Negru,4.4,3.2,0.53,Bara,25
+,PE500,Negru,4.4,3.2,0.65,Bara,28
+,PE500,Negru,4.4,3.2,0.75,Bara,30
+,PE500,Negru,4.4,3.2,0.85,Bara,32
+,PE500,Negru,4.4,3.2,1.03,Bara,35
+,PE500,Negru,4.4,3.2,1.32,Bara,40
+,PE500,Negru,4.4,3.2,1.68,Bara,45
+,PE500,Negru,4.4,3.2,2.06,Bara,50
+,PE500,Negru,4.4,3.2,2.47,Bara,55
+,PE500,Negru,4.4,3.2,2.97,Bara,60
+,PE500,Negru,4.4,3.2,3.47,Bara,65
+,PE500,Negru,4.4,3.2,4.01,Bara,70
+,PE500,Negru,4.4,3.2,4.58,Bara,75
+,PE500,Negru,4.4,3.2,5.25,Bara,80
+,PE500,Negru,4.4,3.2,5.91,Bara,85
+,PE500,Negru,4.4,3.2,6.64,Bara,90
+,PE500,Negru,4.4,3.2,7.37,Bara,95
+,PE500,Negru,4.4,3.2,8.2,Bara,100
+,PE500,Negru,4.4,3.2,9.97,Bara,110
+,PE500,Negru,4.4,3.2,11.91,Bara,120
+,PE500,Negru,4.4,3.2,12.89,Bara,125
+,PE500,Negru,4.4,3.2,13.92,Bara,130
+,PE500,Negru,4.4,3.2,14.97,Bara,135
+,PE500,Negru,4.4,3.2,16.14,Bara,140
+,PE500,Negru,4.4,3.2,18.47,Bara,150
+,PE500,Negru,4.4,3.2,21.04,Bara,160
+,PE500,Negru,4.4,3.2,23.76,Bara,170
+,PE500,Negru,4.4,3.2,25.29,Bara,175
+,PE500,Negru,4.4,3.2,26.71,Bara,180
+,PE500,Negru,4.4,3.2,29.68,Bara,190
+,PE500,Negru,4.4,3.2,32.96,Bara,200
+,PE500,Negru,4.4,3.2,36.35,Bara,210
+,PE500,Negru,4.4,3.2,39.79,Bara,225
+,PE500,Negru,4.4,3.2,43.39,Bara,230
+,PE500,Negru,4.4,3.2,47.36,Bara,240
+,PE500,Negru,4.4,3.2,51.23,Bara,250
+,,,,,,,
+,PE500,Alb,4.4,3.2,10,Placa,5
+,PE500,Alb,4.4,3.2,20,Placa,10
+,PE500,Alb,4.4,3.2,24,Placa,12
+,PE500,Alb,4.4,3.2,30,Placa,15
+,PE500,Alb,4.4,3.2,36,Placa,18
+,PE500,Alb,4.4,3.2,40,Placa,20
+,PE500,Alb,4.4,3.2,44,Placa,22
+,PE500,Alb,4.4,3.2,50,Placa,25
+,PE500,Alb,4.4,3.2,60,Placa,30
+,PE500,Alb,4.4,3.2,70,Placa,35
+,PE500,Alb,4.9,3.5,80,Placa,40
+,PE500,Alb,4.9,3.5,90,Placa,45
+,PE500,Alb,4.9,3.5,100,Placa,50
+,PE500,Alb,4.9,3.5,110,Placa,55
+,PE500,Alb,4.9,3.5,120,Placa,60
+,PE500,Alb,4.9,3.5,130,Placa,65
+,PE500,Alb,4.9,3.5,140,Placa,70
+,PE500,Alb,4.9,3.5,150,Placa,75
+,PE500,Alb,4.9,3.5,160,Placa,80
+,PE500,Alb,4.9,3.5,170,Placa,85
+,PE500,Alb,4.9,3.5,180,Placa,90
+,PE500,Alb,4.9,3.5,190,Placa,95
+,PE500,Alb,4.9,3.5,200,Placa,100
+,PE500,Alb,4.9,3.5,220,Placa,110
+,PE500,Alb,4.9,3.5,240,Placa,120
+,PE500,Alb,4.9,3.5,260,Placa,130
+,PE500,Alb,4.9,3.5,280,Placa,140
+,PE500,Alb,4.9,3.5,300,Placa,150
+,PE500,Alb,4.9,3.5,320,Placa,160
+,PE500,Alb,4.9,3.5,340,Placa,170
+,PE500,Alb,4.9,3.5,360,Placa,180
+,PE500,Alb,4.9,3.5,380,Placa,190
+,PE500,Alb,4.9,3.5,400,Placa,200
+,,,,,,,
+,PE500,Negru,4.4,3.2,10,Placa,5
+,PE500,Negru,4.4,3.2,20,Placa,10
+,PE500,Negru,4.4,3.2,24,Placa,12
+,PE500,Negru,4.4,3.2,30,Placa,15
+,PE500,Negru,4.4,3.2,36,Placa,18
+,PE500,Negru,4.4,3.2,40,Placa,20
+,PE500,Negru,4.4,3.2,44,Placa,22
+,PE500,Negru,4.4,3.2,50,Placa,25
+,PE500,Negru,4.4,3.2,60,Placa,30
+,PE500,Negru,4.4,3.2,70,Placa,35
+,PE500,Negru,4.9,3.5,80,Placa,40
+,PE500,Negru,4.9,3.5,90,Placa,45
+,PE500,Negru,4.9,3.5,100,Placa,50
+,PE500,Negru,4.9,3.5,110,Placa,55
+,PE500,Negru,4.9,3.5,120,Placa,60
+,PE500,Negru,4.9,3.5,130,Placa,65
+,PE500,Negru,4.9,3.5,140,Placa,70
+,PE500,Negru,4.9,3.5,150,Placa,75
+,PE500,Negru,4.9,3.5,160,Placa,80
+,PE500,Negru,4.9,3.5,170,Placa,85
+,PE500,Negru,4.9,3.5,180,Placa,90
+,PE500,Negru,4.9,3.5,190,Placa,95
+,PE500,Negru,4.9,3.5,200,Placa,100
+,PE500,Negru,4.9,3.5,220,Placa,110
+,PE500,Negru,4.9,3.5,240,Placa,120
+,PE500,Negru,4.9,3.5,260,Placa,130
+,PE500,Negru,4.9,3.5,280,Placa,140
+,PE500,Negru,4.9,3.5,300,Placa,150
+,PE500,Negru,4.9,3.5,320,Placa,160
+,PE500,Negru,4.9,3.5,340,Placa,170
+,PE500,Negru,4.9,3.5,360,Placa,180
+,PE500,Negru,4.9,3.5,380,Placa,190
+,PE500,Negru,4.9,3.5,400,Placa,200

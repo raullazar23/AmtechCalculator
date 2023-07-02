@@ -5,19 +5,18 @@ using System.Linq;
 
 class DataExtractor 
 {
-        public RadioButton formaInput;
-        public ComboBox materialInput,grosimeInput;
-        public RadioButton culoareInput;
         string pretkgInput, GreutateInput;
         float pretkgInputint, GreutateInputInt;
-        string filePath = "D:\\AmtechCalculator\\DatabaseInfo.csv";
+        string filePath;
 
-    public DataExtractor() { }
+    public DataExtractor(string filePath) {
+        this.filePath = filePath;
+    }
 
 
-        public float FindMatchingRow(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, ComboBox grosimeInput)
+        public float FindMatchingRow(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, TextBox grosimeInput)
         {
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(this.filePath);
 
             string[] headers = lines[0].Split(',');
 
@@ -56,7 +55,7 @@ class DataExtractor
             return pretkgInputint;
         }
 
-    public float FindMatchingRowGreutate(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, ComboBox grosimeInput)
+    public float FindMatchingRowGreutate(RadioButton formaInput, ComboBox materialInput, RadioButton culoareInput, TextBox grosimeInput)
     {
         string[] lines = File.ReadAllLines(filePath);
 
@@ -93,6 +92,9 @@ class DataExtractor
         if (founded == true)
         {
             return GreutateInputInt;
+        }else if (founded == false)
+        {
+            MessageBox.Show("Valoare inexistenta in tabel!", "Atentie!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         return GreutateInputInt;
     }

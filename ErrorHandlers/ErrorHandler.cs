@@ -14,9 +14,9 @@ namespace AmtechCalculator.ErrorHandlers
 
         public ErrorHandler() { }
 
-        public void eroareCuloare(RadioButton whiteRadioButton, RadioButton blackRadioButton)
+        public void eroareCuloare(RadioButton whiteRadioButton, RadioButton blackRadioButton, RadioButton verdeRadioButton, RadioButton universalRadioButton)
         {
-            if (!whiteRadioButton.Checked && !blackRadioButton.Checked)
+            if (!whiteRadioButton.Checked && !blackRadioButton.Checked && !verdeRadioButton.Checked && !universalRadioButton.Checked)
             {
                 MessageBox.Show("Introduceti o culoare!", "Atentie!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -31,6 +31,12 @@ namespace AmtechCalculator.ErrorHandlers
             }
         }
 
+        public void nopath(DataExtractor extractor)
+        {
+            if (extractor == null)
+                MessageBox.Show("Nu exista baza de date!", "Atentie", MessageBoxButtons.OK, MessageBoxIcon.Error);           
+        }
+
         public void eroareValori(TextBox latimeTextBox, TextBox lungimeTextBox)
         {
             float lungime, latime;
@@ -40,9 +46,9 @@ namespace AmtechCalculator.ErrorHandlers
             }
         }
 
-        public void eroareGrosime(ComboBox grosimeComboBox)
+        public void eroareGrosime(TextBox grosimeComboBox)
         {
-            if (grosimeComboBox.SelectedIndex == -1)
+            if (grosimeComboBox == null)
             {
                 MessageBox.Show("Adaugati grosimea placii/barei!", "Atentie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

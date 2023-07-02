@@ -30,11 +30,12 @@
         {
             exitButton = new Button();
             groupBox3 = new GroupBox();
+            databaseButton = new Button();
             label15 = new Label();
             materialBox = new ComboBox();
             baraPanel = new Panel();
+            diamTextBox = new TextBox();
             ButonBara = new Button();
-            diamPa6ComboBox = new ComboBox();
             label10 = new Label();
             label11 = new Label();
             label12 = new Label();
@@ -47,14 +48,16 @@
             label17 = new Label();
             nrbucPa6Box = new TextBox();
             groupBox4 = new GroupBox();
+            radioVerdeBara = new RadioButton();
+            radioUniversalBara = new RadioButton();
             negruBaraButton = new RadioButton();
             albBaraButton = new RadioButton();
             groupBox5 = new GroupBox();
             pretpersonalizat = new TextBox();
-            prestabilitBara = new RadioButton();
+            clientBara = new RadioButton();
             personalizatBara = new RadioButton();
             placaPanel = new Panel();
-            grosimeComboBox = new ComboBox();
+            grosimeTextBox = new TextBox();
             label9 = new Label();
             ButonPlaca = new Button();
             label1 = new Label();
@@ -71,6 +74,8 @@
             nrbucTextBox = new TextBox();
             label6 = new Label();
             groupBox1 = new GroupBox();
+            radioVerdePlaca = new RadioButton();
+            radioUniversalPlaca = new RadioButton();
             blackButton = new RadioButton();
             whiteButton = new RadioButton();
             groupBox2 = new GroupBox();
@@ -79,6 +84,8 @@
             personalizatButton = new RadioButton();
             baraButton = new RadioButton();
             placaButton = new RadioButton();
+            openFileDialog1 = new OpenFileDialog();
+            distribuitorBara = new RadioButton();
             groupBox3.SuspendLayout();
             baraPanel.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -100,6 +107,7 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(databaseButton);
             groupBox3.Controls.Add(label15);
             groupBox3.Controls.Add(materialBox);
             groupBox3.Controls.Add(baraPanel);
@@ -108,10 +116,20 @@
             groupBox3.Controls.Add(placaButton);
             groupBox3.Location = new Point(-2, 12);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(421, 316);
+            groupBox3.Size = new Size(428, 316);
             groupBox3.TabIndex = 25;
             groupBox3.TabStop = false;
             groupBox3.Text = "Forma";
+            // 
+            // databaseButton
+            // 
+            databaseButton.Location = new Point(337, 16);
+            databaseButton.Name = "databaseButton";
+            databaseButton.Size = new Size(75, 23);
+            databaseButton.TabIndex = 28;
+            databaseButton.Text = "Database";
+            databaseButton.UseVisualStyleBackColor = true;
+            databaseButton.Click += databaseButton_Click;
             // 
             // label15
             // 
@@ -125,7 +143,7 @@
             // materialBox
             // 
             materialBox.FormattingEnabled = true;
-            materialBox.Items.AddRange(new object[] { "PA6", "PA6.6", "POM", "PEHD1000", "PEHD500", "PEHD300", "PVC", "PP", "Plexiglass", "Policarbonat", "Textolit" });
+            materialBox.Items.AddRange(new object[] { "PE1000", "PE500", "PA 6 E", "PA 6 G", "POM", "PET", "PEEK", "PP", "PVC", "Textolit", "PTFE" });
             materialBox.Location = new Point(197, 16);
             materialBox.Name = "materialBox";
             materialBox.Size = new Size(121, 23);
@@ -133,8 +151,8 @@
             // 
             // baraPanel
             // 
+            baraPanel.Controls.Add(diamTextBox);
             baraPanel.Controls.Add(ButonBara);
-            baraPanel.Controls.Add(diamPa6ComboBox);
             baraPanel.Controls.Add(label10);
             baraPanel.Controls.Add(label11);
             baraPanel.Controls.Add(label12);
@@ -148,10 +166,18 @@
             baraPanel.Controls.Add(nrbucPa6Box);
             baraPanel.Controls.Add(groupBox4);
             baraPanel.Controls.Add(groupBox5);
-            baraPanel.Location = new Point(14, 49);
+            baraPanel.Location = new Point(6, 52);
             baraPanel.Name = "baraPanel";
-            baraPanel.Size = new Size(406, 251);
+            baraPanel.Size = new Size(415, 251);
             baraPanel.TabIndex = 27;
+            // 
+            // diamTextBox
+            // 
+            diamTextBox.Location = new Point(19, 34);
+            diamTextBox.Margin = new Padding(3, 2, 3, 2);
+            diamTextBox.Name = "diamTextBox";
+            diamTextBox.Size = new Size(110, 23);
+            diamTextBox.TabIndex = 26;
             // 
             // ButonBara
             // 
@@ -163,19 +189,10 @@
             ButonBara.UseVisualStyleBackColor = true;
             ButonBara.Click += ButonBara_Click;
             // 
-            // diamPa6ComboBox
-            // 
-            diamPa6ComboBox.FormattingEnabled = true;
-            diamPa6ComboBox.Items.AddRange(new object[] { "5", "10", "12", "15", "20", "25", "30", "35", "40", "45", "50" });
-            diamPa6ComboBox.Location = new Point(19, 30);
-            diamPa6ComboBox.Name = "diamPa6ComboBox";
-            diamPa6ComboBox.Size = new Size(121, 23);
-            diamPa6ComboBox.TabIndex = 1;
-            // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(273, 208);
+            label10.Location = new Point(305, 229);
             label10.Name = "label10";
             label10.Size = new Size(37, 15);
             label10.TabIndex = 24;
@@ -193,7 +210,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(273, 177);
+            label12.Location = new Point(311, 200);
             label12.Name = "label12";
             label12.Size = new Size(32, 15);
             label12.TabIndex = 23;
@@ -209,16 +226,18 @@
             // 
             // baraEUR
             // 
-            baraEUR.Location = new Point(209, 201);
+            baraEUR.BackColor = SystemColors.Info;
+            baraEUR.Location = new Point(210, 222);
             baraEUR.Margin = new Padding(3, 2, 3, 2);
             baraEUR.Name = "baraEUR";
-            baraEUR.Size = new Size(58, 23);
+            baraEUR.ReadOnly = true;
+            baraEUR.Size = new Size(84, 23);
             baraEUR.TabIndex = 22;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(209, 157);
+            label13.Location = new Point(210, 178);
             label13.Name = "label13";
             label13.Size = new Size(54, 15);
             label13.TabIndex = 21;
@@ -235,10 +254,12 @@
             // 
             // baraRON
             // 
-            baraRON.Location = new Point(209, 174);
+            baraRON.BackColor = SystemColors.Info;
+            baraRON.Location = new Point(210, 195);
             baraRON.Margin = new Padding(3, 2, 3, 2);
             baraRON.Name = "baraRON";
-            baraRON.Size = new Size(58, 23);
+            baraRON.ReadOnly = true;
+            baraRON.Size = new Size(84, 23);
             baraRON.TabIndex = 20;
             // 
             // label16
@@ -270,14 +291,38 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(radioVerdeBara);
+            groupBox4.Controls.Add(radioUniversalBara);
             groupBox4.Controls.Add(negruBaraButton);
             groupBox4.Controls.Add(albBaraButton);
             groupBox4.Location = new Point(184, 12);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(109, 41);
+            groupBox4.Size = new Size(216, 69);
             groupBox4.TabIndex = 15;
             groupBox4.TabStop = false;
             groupBox4.Text = "Culoare";
+            // 
+            // radioVerdeBara
+            // 
+            radioVerdeBara.AutoSize = true;
+            radioVerdeBara.Location = new Point(6, 44);
+            radioVerdeBara.Name = "radioVerdeBara";
+            radioVerdeBara.Size = new Size(54, 19);
+            radioVerdeBara.TabIndex = 6;
+            radioVerdeBara.TabStop = true;
+            radioVerdeBara.Text = "Verde";
+            radioVerdeBara.UseVisualStyleBackColor = true;
+            // 
+            // radioUniversalBara
+            // 
+            radioUniversalBara.AutoSize = true;
+            radioUniversalBara.Location = new Point(71, 44);
+            radioUniversalBara.Name = "radioUniversalBara";
+            radioUniversalBara.Size = new Size(73, 19);
+            radioUniversalBara.TabIndex = 5;
+            radioUniversalBara.TabStop = true;
+            radioUniversalBara.Text = "Universal";
+            radioUniversalBara.UseVisualStyleBackColor = true;
             // 
             // negruBaraButton
             // 
@@ -304,12 +349,13 @@
             // 
             // groupBox5
             // 
+            groupBox5.Controls.Add(distribuitorBara);
             groupBox5.Controls.Add(pretpersonalizat);
-            groupBox5.Controls.Add(prestabilitBara);
+            groupBox5.Controls.Add(clientBara);
             groupBox5.Controls.Add(personalizatBara);
-            groupBox5.Location = new Point(184, 66);
+            groupBox5.Location = new Point(184, 93);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(200, 76);
+            groupBox5.Size = new Size(231, 76);
             groupBox5.TabIndex = 16;
             groupBox5.TabStop = false;
             groupBox5.Text = "Preț/kg";
@@ -323,23 +369,25 @@
             pretpersonalizat.TabIndex = 17;
             pretpersonalizat.Text = "Pret personalizat";
             pretpersonalizat.Visible = false;
+            pretpersonalizat.Enter += pretpersonalizat_Enter;
+            pretpersonalizat.Leave += pretpersonalizat_Leave;
             // 
-            // prestabilitBara
+            // clientBara
             // 
-            prestabilitBara.AutoSize = true;
-            prestabilitBara.Checked = true;
-            prestabilitBara.Location = new Point(6, 22);
-            prestabilitBara.Name = "prestabilitBara";
-            prestabilitBara.Size = new Size(77, 19);
-            prestabilitBara.TabIndex = 13;
-            prestabilitBara.TabStop = true;
-            prestabilitBara.Text = "Prestabilit";
-            prestabilitBara.UseVisualStyleBackColor = true;
+            clientBara.AutoSize = true;
+            clientBara.Checked = true;
+            clientBara.Location = new Point(6, 22);
+            clientBara.Name = "clientBara";
+            clientBara.Size = new Size(56, 19);
+            clientBara.TabIndex = 13;
+            clientBara.TabStop = true;
+            clientBara.Text = "Client";
+            clientBara.UseVisualStyleBackColor = true;
             // 
             // personalizatBara
             // 
             personalizatBara.AutoSize = true;
-            personalizatBara.Location = new Point(89, 22);
+            personalizatBara.Location = new Point(140, 22);
             personalizatBara.Name = "personalizatBara";
             personalizatBara.Size = new Size(88, 19);
             personalizatBara.TabIndex = 14;
@@ -349,7 +397,7 @@
             // 
             // placaPanel
             // 
-            placaPanel.Controls.Add(grosimeComboBox);
+            placaPanel.Controls.Add(grosimeTextBox);
             placaPanel.Controls.Add(label9);
             placaPanel.Controls.Add(ButonPlaca);
             placaPanel.Controls.Add(label1);
@@ -372,19 +420,18 @@
             placaPanel.Size = new Size(406, 251);
             placaPanel.TabIndex = 26;
             // 
-            // grosimeComboBox
+            // grosimeTextBox
             // 
-            grosimeComboBox.FormattingEnabled = true;
-            grosimeComboBox.Items.AddRange(new object[] { "5mm", "10mm", "12mm", "15mm", "20mm", "25mm", "30mm", "35mm", "40mm", "45mm", "50mm" });
-            grosimeComboBox.Location = new Point(19, 30);
-            grosimeComboBox.Name = "grosimeComboBox";
-            grosimeComboBox.Size = new Size(121, 23);
-            grosimeComboBox.TabIndex = 1;
+            grosimeTextBox.Location = new Point(19, 33);
+            grosimeTextBox.Margin = new Padding(3, 2, 3, 2);
+            grosimeTextBox.Name = "grosimeTextBox";
+            grosimeTextBox.Size = new Size(110, 23);
+            grosimeTextBox.TabIndex = 28;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(273, 208);
+            label9.Location = new Point(299, 220);
             label9.Name = "label9";
             label9.Size = new Size(37, 15);
             label9.TabIndex = 24;
@@ -412,7 +459,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(273, 177);
+            label8.Location = new Point(299, 193);
             label8.Name = "label8";
             label8.Size = new Size(32, 15);
             label8.TabIndex = 23;
@@ -428,10 +475,12 @@
             // 
             // euroTextBox
             // 
-            euroTextBox.Location = new Point(209, 201);
+            euroTextBox.BackColor = SystemColors.Info;
+            euroTextBox.Location = new Point(209, 218);
             euroTextBox.Margin = new Padding(3, 2, 3, 2);
             euroTextBox.Name = "euroTextBox";
-            euroTextBox.Size = new Size(58, 23);
+            euroTextBox.ReadOnly = true;
+            euroTextBox.Size = new Size(85, 23);
             euroTextBox.TabIndex = 22;
             // 
             // latimeTextBox
@@ -445,7 +494,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(209, 157);
+            label7.Location = new Point(209, 174);
             label7.Name = "label7";
             label7.Size = new Size(54, 15);
             label7.TabIndex = 21;
@@ -462,10 +511,12 @@
             // 
             // ronTextBox
             // 
-            ronTextBox.Location = new Point(209, 174);
+            ronTextBox.BackColor = SystemColors.Info;
+            ronTextBox.Location = new Point(209, 191);
             ronTextBox.Margin = new Padding(3, 2, 3, 2);
             ronTextBox.Name = "ronTextBox";
-            ronTextBox.Size = new Size(58, 23);
+            ronTextBox.ReadOnly = true;
+            ronTextBox.Size = new Size(84, 23);
             ronTextBox.TabIndex = 20;
             // 
             // label4
@@ -502,6 +553,7 @@
             nrbucTextBox.Name = "nrbucTextBox";
             nrbucTextBox.Size = new Size(110, 23);
             nrbucTextBox.TabIndex = 18;
+            nrbucTextBox.Text = "1";
             // 
             // label6
             // 
@@ -514,14 +566,38 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(radioVerdePlaca);
+            groupBox1.Controls.Add(radioUniversalPlaca);
             groupBox1.Controls.Add(blackButton);
             groupBox1.Controls.Add(whiteButton);
             groupBox1.Location = new Point(184, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(109, 41);
+            groupBox1.Size = new Size(214, 70);
             groupBox1.TabIndex = 15;
             groupBox1.TabStop = false;
             groupBox1.Text = "Culoare";
+            // 
+            // radioVerdePlaca
+            // 
+            radioVerdePlaca.AutoSize = true;
+            radioVerdePlaca.Location = new Point(6, 47);
+            radioVerdePlaca.Name = "radioVerdePlaca";
+            radioVerdePlaca.Size = new Size(54, 19);
+            radioVerdePlaca.TabIndex = 6;
+            radioVerdePlaca.TabStop = true;
+            radioVerdePlaca.Text = "Verde";
+            radioVerdePlaca.UseVisualStyleBackColor = true;
+            // 
+            // radioUniversalPlaca
+            // 
+            radioUniversalPlaca.AutoSize = true;
+            radioUniversalPlaca.Location = new Point(68, 47);
+            radioUniversalPlaca.Name = "radioUniversalPlaca";
+            radioUniversalPlaca.Size = new Size(73, 19);
+            radioUniversalPlaca.TabIndex = 5;
+            radioUniversalPlaca.TabStop = true;
+            radioUniversalPlaca.Text = "Universal";
+            radioUniversalPlaca.UseVisualStyleBackColor = true;
             // 
             // blackButton
             // 
@@ -551,7 +627,7 @@
             groupBox2.Controls.Add(priceTextBox);
             groupBox2.Controls.Add(prestabilitButton);
             groupBox2.Controls.Add(personalizatButton);
-            groupBox2.Location = new Point(184, 66);
+            groupBox2.Location = new Point(184, 88);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(220, 76);
             groupBox2.TabIndex = 16;
@@ -613,15 +689,27 @@
             placaButton.Size = new Size(53, 19);
             placaButton.TabIndex = 0;
             placaButton.TabStop = true;
-            placaButton.Text = "Placă";
+            placaButton.Text = "Placa";
             placaButton.UseVisualStyleBackColor = true;
             placaButton.CheckedChanged += placaButton_CheckedChanged;
+            // 
+            // distribuitorBara
+            // 
+            distribuitorBara.AutoSize = true;
+            distribuitorBara.Checked = true;
+            distribuitorBara.Location = new Point(57, 22);
+            distribuitorBara.Name = "distribuitorBara";
+            distribuitorBara.Size = new Size(84, 19);
+            distribuitorBara.TabIndex = 18;
+            distribuitorBara.TabStop = true;
+            distribuitorBara.Text = "Distribuitor";
+            distribuitorBara.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(486, 368);
+            ClientSize = new Size(457, 368);
             Controls.Add(groupBox3);
             Controls.Add(exitButton);
             Name = "Form1";
@@ -647,7 +735,6 @@
         #endregion
 
         private Button exitButton;
-        private ComboBox grosimeComboBox;
         private RadioButton blackButton;
         private RadioButton whiteButton;
         private Label label1;
@@ -675,7 +762,6 @@
         private RadioButton placaButton;
         private Panel placaPanel;
         private Panel baraPanel;
-        private ComboBox diamPa6ComboBox;
         private Label label10;
         private Label label11;
         private Label label12;
@@ -692,10 +778,19 @@
         private RadioButton albBaraButton;
         private GroupBox groupBox5;
         private TextBox pretpersonalizat;
-        private RadioButton prestabilitBara;
+        private RadioButton clientBara;
         private RadioButton personalizatBara;
         private Label label15;
         private ComboBox materialBox;
         private Button ButonBara;
+        private RadioButton radioVerdeBara;
+        private RadioButton radioUniversalBara;
+        private RadioButton radioVerdePlaca;
+        private RadioButton radioUniversalPlaca;
+        private OpenFileDialog openFileDialog1;
+        private Button databaseButton;
+        private TextBox diamTextBox;
+        private TextBox grosimeTextBox;
+        private RadioButton distribuitorBara;
     }
 }

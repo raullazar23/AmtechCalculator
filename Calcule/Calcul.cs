@@ -7,7 +7,7 @@ using AmtechCalculator;
 
 namespace AmtechCalculator.Calcule
 {
-    class Calcul : DataExtractor
+    class Calcul
     {
         protected float lungime, kgtotal, pretkg, pretfinal,latime;
         
@@ -25,7 +25,7 @@ namespace AmtechCalculator.Calcule
 
         public float calculPlaca(float lungime, float latime, float kgtotal, float pretkg)
         {
-            pretfinal = (float)(kgtotal * lungime * Math.Pow(10,-3) + latime * Math.Pow(10,-3) * pretkg);
+            pretfinal = (float)(kgtotal * (lungime * Math.Pow(10,-3)) + (latime * Math.Pow(10,-3)) * pretkg);
             return pretfinal;
         }
 
